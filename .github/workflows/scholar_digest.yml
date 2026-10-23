@@ -1,0 +1,38 @@
+name: Scholar Digest → AI論文まとめページ
+
+on:
+  schedule:
+    # 毎日 10:00 JST (= 01:00 UTC) に実行
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  scholar-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run scholar digest
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scholar_digest.py
+
+      - name: Commit and push updated pages
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/papers.json docs/index.html
+          git diff --cached --quiet && echo "No changes" || \
+            git commit -m "scholar: $(date -u +%Y-%m-%d)" && git push
