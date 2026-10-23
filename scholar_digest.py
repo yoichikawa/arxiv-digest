@@ -20,7 +20,7 @@ from google import genai
 
 JST = timezone(timedelta(hours=9))
 GEMINI_MODEL = "gemini-3.8-flash"
-PAPERS_PER_RUN = 10
+PAPERS_PER_RUN = 30
 DOCS_DIR = Path("docs")
 PAPERS_JSON = DOCS_DIR / "papers.json"
 
@@ -110,8 +110,11 @@ def pick_new(candidates: list[dict], sent_ids: set) -> list[dict]:
 
 # ── Summarize ─────────────────────────────────────────────────────────────────
 
-def summarize(api_key: str, papers: list[dict]) -> list[str]:
-    client = genai.Client(api_key=api_key)
+SUMMARIZE_BATCH = 10  # Gemini に一度に送る論文数
+
+
+def _summarize_batch(client, papers: list[dict]) -> list[str]:
+    """papers（最大SUMMARIZE_BATCH件）をGeminiで要約して返す。"""
     parts = [
         f"[{i}] {p['title']} ({p['year']})\n{p['abstract']}"
         for i, p in enumerate(papers)
@@ -146,6 +149,19 @@ def summarize(api_key: str, papers: list[dict]) -> list[str]:
                 return [""] * len(papers)
             time.sleep(30 * (attempt + 1))
     return [""] * len(papers)
+
+
+def summarize(api_key: str, papers: list[dict]) -> list[str]:
+    """全論文をSUMMARIZE_BATCH件ずつバッチ処理して要約する。"""
+    client = genai.Client(api_key=api_key)
+    results = []
+    for i in range(0, len(papers), SUMMARIZE_BATCH):
+        batch = papers[i:i + SUMMARIZE_BATCH]
+        print(f"  Summarizing batch {i // SUMMARIZE_BATCH + 1} ({len(batch)} papers)...")
+        results.extend(_summarize_batch(client, batch))
+        if i + SUMMARIZE_BATCH < len(papers):
+            time.sleep(5)  # バッチ間のレート制限対策
+    return results
 
 
 # ── HTML ──────────────────────────────────────────────────────────────────────
