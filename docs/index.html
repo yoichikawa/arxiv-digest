@@ -6,59 +6,16 @@
 <title>AI論文まとめ</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
-:root {
-  --bg: #ffffff; --bg2: #f7f8fa; --fg: #1a1a1a; --fg2: #555; --fg3: #888;
-  --border: #e0e3e8; --accent: #3563e9; --accent-light: #e8eeff;
-  --link: #3563e9;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1117; --bg2: #181c25; --fg: #e8eaf0; --fg2: #a0a8b8; --fg3: #6b7280;
-    --border: #2a2f3e; --accent: #6b9aff; --accent-light: #1a2340; --link: #6b9aff;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0f1117; --bg2: #181c25; --fg: #e8eaf0; --fg2: #a0a8b8; --fg3: #6b7280;
-  --border: #2a2f3e; --accent: #6b9aff; --accent-light: #1a2340; --link: #6b9aff;
-  color-scheme: dark;
-}
-*, *::before, *::after { box-sizing: border-box; }
-body {
-  background: var(--bg); color: var(--fg);
-  font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.8;
-  margin: 0;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 0 64px;
-}
-.container { max-width: 760px; margin: 0 auto; }
-.site-header {
-  padding-block: 40px 24px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 32px;
-}
-.site-header h1 { margin: 0 0 8px; font-size: 24px; font-weight: 700; }
-.site-header p { margin: 0; font-size: 13px; color: var(--fg3); }
-.stats {
-  display: flex; gap: 16px; flex-wrap: wrap;
-  margin-bottom: 28px; font-size: 13px; color: var(--fg3);
-}
-.stats strong { color: var(--fg); }
-.card {
-  border: 1px solid var(--border); border-radius: 10px;
-  padding: 20px 24px; margin-bottom: 16px;
-  background: var(--bg);
-}
-.card-meta {
-  display: flex; flex-wrap: wrap; gap: 10px;
-  font-size: 12px; color: var(--fg3); margin-bottom: 8px;
-}
-.score { color: var(--accent); font-weight: 700; }
-.card-title { margin: 0 0 10px; font-size: 16px; font-weight: 700; line-height: 1.4; }
-.card-title a { color: var(--link); text-decoration: none; }
-.card-title a:hover { text-decoration: underline; }
-.card-summary { margin: 0; font-size: 14px; color: var(--fg2); line-height: 1.7; }
+:root { --bg:#fff;--fg:#1a1a1a;--fg3:#888;--border:#e0e3e8; }
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1117;--fg:#e8eaf0;--fg3:#6b7280;--border:#2a2f3e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1117;--fg:#e8eaf0;--fg3:#6b7280;--border:#2a2f3e;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:1.8;margin:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.container{max-width:760px;margin:0 auto}
+.site-header{padding-block:40px 24px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.site-header h1{margin:0 0 8px;font-size:24px;font-weight:700}
+.site-header p{margin:0;font-size:13px;color:var(--fg3)}
+.empty{text-align:center;padding:80px 0;color:var(--fg3)}
 </style>
 </head>
 <body>
@@ -67,72 +24,7 @@ body {
     <h1>AI論文まとめ</h1>
     <p>Semantic Scholarの影響力スコア順に厳選したAI論文の日本語要約集</p>
   </header>
-  <div class="stats">
-    <span>論文数: <strong>5</strong></span>
-    <span>最終更新: <strong>2026-10-23 15:35 JST</strong></span>
-    <span>影響力スコア（influential citations）順</span>
-  </div>
-  
-    <article class="card">
-      <div class="card-meta">
-        <span class="score">★ 6457 influential</span>
-        <span class="cite">引用 45210</span>
-        <span class="year">2005</span>
-        <span class="added">追加: 2026-10-23</span>
-      </div>
-      <h2 class="card-title">
-        <a href="https://www.semanticscholar.org/paper/97efafdb4a3942ab3efba53ded7413199f79c054" target="_blank" rel="noopener">Reinforcement Learning: An Introduction</a>
-      </h2>
-      <p class="card-summary">エージェントが不確実な環境下で報酬を最大化するための体系的な学習枠組みの理解が求められていました。本書は強化学習（試行錯誤を通じて最適な行動を学ぶ手法）の基礎概念から重要アルゴリズムまでを網羅的かつ体系的に整理して解説しました。現在に至る強化学習および現代AI研究の基盤を築き、分野の発展を決定づけた金字塔的な文献です。</p>
-    </article>
-    <article class="card">
-      <div class="card-meta">
-        <span class="score">★ 3527 influential</span>
-        <span class="cite">引用 33708</span>
-        <span class="year">2015</span>
-        <span class="added">追加: 2026-10-23</span>
-      </div>
-      <h2 class="card-title">
-        <a href="https://www.semanticscholar.org/paper/340f48901f72278f6bf78a04ee5b01df208cc508" target="_blank" rel="noopener">Human-level control through deep reinforcement learning</a>
-      </h2>
-      <p class="card-summary">画面のピクセル情報のような高次元の感覚入力から、人間と同等以上に複雑な制御を行うことは困難でした。著者らはCNN（畳み込みニューラルネットワーク）とQ学習（行動価値を学ぶ手法）を統合したDQN（深層Qネットワーク）を開発し、人間の事前知識なしに直接学習させることに成功しました。多数のAtariゲームで人間レベルの性能を達成し、深層学習と強化学習を融合させた深層強化学習の威力を世界に示した歴史的論文です。</p>
-    </article>
-    <article class="card">
-      <div class="card-meta">
-        <span class="score">★ 2253 influential</span>
-        <span class="cite">引用 16266</span>
-        <span class="year">2015</span>
-        <span class="added">追加: 2026-10-23</span>
-      </div>
-      <h2 class="card-title">
-        <a href="https://arxiv.org/abs/1509.02971" target="_blank" rel="noopener">Continuous control with deep reinforcement learning</a>
-      </h2>
-      <p class="card-summary">従来のDQNは離散的な選択肢しか扱えず、ロボット操作のような連続的な動作を必要とする連続行動空間の制御タスクには適用できませんでした。そこで、決定論的方策勾配法に基づくActor-Critic（行動決定役と評価役を分ける手法）アルゴリズムであるDDPGを提案し、連続値制御を可能にしました。これにより同一の手法で多様な物理シミュレーション課題を解決できるようになり、ロボット制御など実世界応用の幅を大きく広げました。</p>
-    </article>
-    <article class="card">
-      <div class="card-meta">
-        <span class="score">★ 2160 influential</span>
-        <span class="cite">引用 12788</span>
-        <span class="year">2018</span>
-        <span class="added">追加: 2026-10-23</span>
-      </div>
-      <h2 class="card-title">
-        <a href="https://arxiv.org/abs/1801.01290" target="_blank" rel="noopener">Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor</a>
-      </h2>
-      <p class="card-summary">従来の深層強化学習は、膨大な試行回数が必要なサンプル効率の低さと、ハイパーパラメータ（モデルの手動設定値）に依存する学習の不安定さが大きな課題でした。この問題に対し、報酬の最大化に加えてエントロピー（行動の多様性・不確実性）も最大化するオフポリシー（過去の異なる探索データも再利用できる手法）のSACを提案しました。学習の安定性とデータ効率を劇的に向上させ、実世界の複雑なロボット制御などにおける標準手法となりました。</p>
-    </article>
-    <article class="card">
-      <div class="card-meta">
-        <span class="score">★ 1504 influential</span>
-        <span class="cite">引用 14098</span>
-        <span class="year">2013</span>
-        <span class="added">追加: 2026-10-23</span>
-      </div>
-      <h2 class="card-title">
-        <a href="https://arxiv.org/abs/1312.5602" target="_blank" rel="noopener">Playing Atari with Deep Reinforcement Learning</a>
-      </h2>
-      <p class="card-summary">人間が手作業で設計した特徴量に頼ることなく、生画像のような高次元の入力から直接エージェントが最適な行動を学習することは困難でした。CNN（畳み込みニューラルネットワーク）にQ学習を組み合わせ、ゲーム画面のピクセルから将来の報酬を予測するモデルを世界で初めて実現しました。Atari 2600のゲームにおいて専門家を超える性能を示し、深層学習を入力から行動決定まで統合した深層強化学習の幕開けとなった重要な研究です。</p>
-    </article>
+  <p class="empty">論文はまだ追加されていません。GitHub Actionsが初回実行されると表示されます。</p>
 </div>
 </body>
 </html>
