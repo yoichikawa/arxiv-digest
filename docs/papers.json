@@ -1,1 +1,57 @@
-﻿[]
+[
+  {
+    "paperId": "97efafdb4a3942ab3efba53ded7413199f79c054",
+    "arxivId": "",
+    "title": "Reinforcement Learning: An Introduction",
+    "year": 2005,
+    "citationCount": 45210,
+    "influentialCitationCount": 6457,
+    "url": "https://www.semanticscholar.org/paper/97efafdb4a3942ab3efba53ded7413199f79c054",
+    "summary": "エージェントが不確実な環境下で報酬を最大化するための体系的な学習枠組みの理解が求められていました。本書は強化学習（試行錯誤を通じて最適な行動を学ぶ手法）の基礎概念から重要アルゴリズムまでを網羅的かつ体系的に整理して解説しました。現在に至る強化学習および現代AI研究の基盤を築き、分野の発展を決定づけた金字塔的な文献です。",
+    "addedDate": "2026-10-23"
+  },
+  {
+    "paperId": "340f48901f72278f6bf78a04ee5b01df208cc508",
+    "arxivId": "",
+    "title": "Human-level control through deep reinforcement learning",
+    "year": 2015,
+    "citationCount": 33708,
+    "influentialCitationCount": 3527,
+    "url": "https://www.semanticscholar.org/paper/340f48901f72278f6bf78a04ee5b01df208cc508",
+    "summary": "画面のピクセル情報のような高次元の感覚入力から、人間と同等以上に複雑な制御を行うことは困難でした。著者らはCNN（畳み込みニューラルネットワーク）とQ学習（行動価値を学ぶ手法）を統合したDQN（深層Qネットワーク）を開発し、人間の事前知識なしに直接学習させることに成功しました。多数のAtariゲームで人間レベルの性能を達成し、深層学習と強化学習を融合させた深層強化学習の威力を世界に示した歴史的論文です。",
+    "addedDate": "2026-10-23"
+  },
+  {
+    "paperId": "024006d4c2a89f7acacc6e4438d156525b60a98f",
+    "arxivId": "1509.02971",
+    "title": "Continuous control with deep reinforcement learning",
+    "year": 2015,
+    "citationCount": 16266,
+    "influentialCitationCount": 2253,
+    "url": "https://arxiv.org/abs/1509.02971",
+    "summary": "従来のDQNは離散的な選択肢しか扱えず、ロボット操作のような連続的な動作を必要とする連続行動空間の制御タスクには適用できませんでした。そこで、決定論的方策勾配法に基づくActor-Critic（行動決定役と評価役を分ける手法）アルゴリズムであるDDPGを提案し、連続値制御を可能にしました。これにより同一の手法で多様な物理シミュレーション課題を解決できるようになり、ロボット制御など実世界応用の幅を大きく広げました。",
+    "addedDate": "2026-10-23"
+  },
+  {
+    "paperId": "811df72e210e20de99719539505da54762a11c6d",
+    "arxivId": "1801.01290",
+    "title": "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor",
+    "year": 2018,
+    "citationCount": 12788,
+    "influentialCitationCount": 2160,
+    "url": "https://arxiv.org/abs/1801.01290",
+    "summary": "従来の深層強化学習は、膨大な試行回数が必要なサンプル効率の低さと、ハイパーパラメータ（モデルの手動設定値）に依存する学習の不安定さが大きな課題でした。この問題に対し、報酬の最大化に加えてエントロピー（行動の多様性・不確実性）も最大化するオフポリシー（過去の異なる探索データも再利用できる手法）のSACを提案しました。学習の安定性とデータ効率を劇的に向上させ、実世界の複雑なロボット制御などにおける標準手法となりました。",
+    "addedDate": "2026-10-23"
+  },
+  {
+    "paperId": "2319a491378867c7049b3da055c5df60e1671158",
+    "arxivId": "1312.5602",
+    "title": "Playing Atari with Deep Reinforcement Learning",
+    "year": 2013,
+    "citationCount": 14098,
+    "influentialCitationCount": 1504,
+    "url": "https://arxiv.org/abs/1312.5602",
+    "summary": "人間が手作業で設計した特徴量に頼ることなく、生画像のような高次元の入力から直接エージェントが最適な行動を学習することは困難でした。CNN（畳み込みニューラルネットワーク）にQ学習を組み合わせ、ゲーム画面のピクセルから将来の報酬を予測するモデルを世界で初めて実現しました。Atari 2600のゲームにおいて専門家を超える性能を示し、深層学習を入力から行動決定まで統合した深層強化学習の幕開けとなった重要な研究です。",
+    "addedDate": "2026-10-23"
+  }
+]
