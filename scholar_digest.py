@@ -48,17 +48,25 @@ def fetch_candidates() -> list[dict]:
             "fieldsOfStudy": "Computer Science",
             "limit": 100,
         }
-        try:
-            resp = requests.get(url, params=params, timeout=20)
-            resp.raise_for_status()
-            for p in resp.json().get("data", []):
-                pid = p.get("paperId", "")
-                if pid and pid not in seen:
-                    seen.add(pid)
-                    papers.append(p)
-        except Exception as e:
-            print(f"    Warning: {e}")
-        time.sleep(1)  # rate limit
+        for attempt in range(4):
+            try:
+                resp = requests.get(url, params=params, timeout=20)
+                if resp.status_code == 429:
+                    wait = 15 * (attempt + 1)
+                    print(f"    Rate limited, waiting {wait}s...")
+                    time.sleep(wait)
+                    continue
+                resp.raise_for_status()
+                for p in resp.json().get("data", []):
+                    pid = p.get("paperId", "")
+                    if pid and pid not in seen:
+                        seen.add(pid)
+                        papers.append(p)
+                break
+            except Exception as e:
+                print(f"    Warning: {e}")
+                break
+        time.sleep(3)  # rate limit
 
     papers.sort(key=lambda p: p.get("influentialCitationCount", 0), reverse=True)
     print(f"  Total candidates: {len(papers)}")
@@ -67,7 +75,7 @@ def fetch_candidates() -> list[dict]:
 
 def load_papers() -> list[dict]:
     if PAPERS_JSON.exists():
-        return json.loads(PAPERS_JSON.read_text(encoding="utf-8"))
+        return json.loads(PAPERS_JSON.read_text(encoding="utf-8-sig"))
     return []
 
 
