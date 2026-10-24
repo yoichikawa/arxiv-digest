@@ -6,16 +6,59 @@
 <title>AI論文まとめ</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
-:root { --bg:#fff;--fg:#1a1a1a;--fg3:#888;--border:#e0e3e8; }
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1117;--fg:#e8eaf0;--fg3:#6b7280;--border:#2a2f3e;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0f1117;--fg:#e8eaf0;--fg3:#6b7280;--border:#2a2f3e;color-scheme:dark}
-*,*::before,*::after{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:1.8;margin:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
-.container{max-width:760px;margin:0 auto}
-.site-header{padding-block:40px 24px;border-bottom:1px solid var(--border);margin-bottom:32px}
-.site-header h1{margin:0 0 8px;font-size:24px;font-weight:700}
-.site-header p{margin:0;font-size:13px;color:var(--fg3)}
-.empty{text-align:center;padding:80px 0;color:var(--fg3)}
+:root {
+  --bg: #ffffff; --bg2: #f7f8fa; --fg: #1a1a1a; --fg2: #555; --fg3: #888;
+  --border: #e0e3e8; --accent: #3563e9; --accent-light: #e8eeff;
+  --link: #3563e9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1117; --bg2: #181c25; --fg: #e8eaf0; --fg2: #a0a8b8; --fg3: #6b7280;
+    --border: #2a2f3e; --accent: #6b9aff; --accent-light: #1a2340; --link: #6b9aff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1117; --bg2: #181c25; --fg: #e8eaf0; --fg2: #a0a8b8; --fg3: #6b7280;
+  --border: #2a2f3e; --accent: #6b9aff; --accent-light: #1a2340; --link: #6b9aff;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.8;
+  margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.container { max-width: 760px; margin: 0 auto; }
+.site-header {
+  padding-block: 40px 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.site-header h1 { margin: 0 0 8px; font-size: 24px; font-weight: 700; }
+.site-header p { margin: 0; font-size: 13px; color: var(--fg3); }
+.stats {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  margin-bottom: 28px; font-size: 13px; color: var(--fg3);
+}
+.stats strong { color: var(--fg); }
+.card {
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 20px 24px; margin-bottom: 16px;
+  background: var(--bg);
+}
+.card-meta {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  font-size: 12px; color: var(--fg3); margin-bottom: 8px;
+}
+.score { color: var(--accent); font-weight: 700; }
+.card-title { margin: 0 0 10px; font-size: 16px; font-weight: 700; line-height: 1.4; }
+.card-title a { color: var(--link); text-decoration: none; }
+.card-title a:hover { text-decoration: underline; }
+.card-summary { margin: 0; font-size: 14px; color: var(--fg2); line-height: 1.7; }
 </style>
 </head>
 <body>
@@ -24,7 +67,372 @@ body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;
     <h1>AI論文まとめ</h1>
     <p>Semantic Scholarの影響力スコア順に厳選したAI論文の日本語要約集</p>
   </header>
-  <p class="empty">論文はまだ追加されていません。GitHub Actionsが初回実行されると表示されます。</p>
+  <div class="stats">
+    <span>論文数: <strong>30</strong></span>
+    <span>最終更新: <strong>2026-10-24 14:44 JST</strong></span>
+    <span>影響力スコア（influential citations）順</span>
+  </div>
+  
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 1021 influential</span>
+        <span class="cite">引用 7455</span>
+        <span class="year">2017</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1708.05031" target="_blank" rel="noopener">Neural Collaborative Filtering</a>
+      </h2>
+      <p class="card-summary">推薦システムでは、ユーザーの好みを予測するために協調フィルタリング（似た嗜好を持つ人の行動履歴から好みを予測する手法）がよく使われます。しかし、従来の数式モデルではユーザーと商品の間の複雑な好みの関係性を捉えきれない問題がありました。この論文では、ニューラルネットワーク（人間の脳の神経回路を模した計算モデル）を活用した「Neural Collaborative Filtering」という仕組みを提案しています。直線的な関係だけでなく非線形（単純な比例関係では表せない複雑な変化）な関係も学習できるよう、多層のネットワークを組み合わせています。映画やECサイトのデータを用いた実験の結果、従来の代表的な推薦手法よりも高い精度でユーザーが興味を持つアイテムを予測できました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 661 influential</span>
+        <span class="cite">引用 2529</span>
+        <span class="year">2014</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/6bd36e9fd0ef20a3074e1430a6cc601e6d407fc3" target="_blank" rel="noopener">DeepReID: Deep Filter Pairing Neural Network for Person Re-identification</a>
+      </h2>
+      <p class="card-summary">複数の防犯カメラに映った映像の中から、同じ人物を同一人物だと見分ける人物再識別という課題があります。カメラごとに照明の明るさや撮影角度、歩く人の姿勢が異なるため、正確に見分けることが困難でした。この論文では、ディープラーニング（多層のニューラルネットワークを用いた深層学習技術）を使って、画像のズレや変形に対応する「フィルターペアリングニューラルネットワーク」を提案しています。画像の部分ごとの特徴を比較し、多少の位置のズレがあっても同一の特徴として捉える仕組みを備えています。大規模な人物画像データセットで検証した結果、従来の手作業で特徴を抽出する手法に比べて人物の照合精度が大きく向上しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 635 influential</span>
+        <span class="cite">引用 5047</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1611.08024" target="_blank" rel="noopener">EEGNet: a compact convolutional neural network for EEG-based brain–computer interfaces</a>
+      </h2>
+      <p class="card-summary">頭皮から測定される脳波（脳の電気的な活動信号）をコンピュータの入力として利用する技術があります。従来は脳波の種類ごとに解析するプログラムを手作業で作り分ける必要があり、幅広い用途で使いにくいという課題がありました。そこで著者らは、構造を軽量にしたCNN（画像を格子状に処理するニューラルネットワーク）である「EEGNet」を提案しました。脳波の時間的な変化と電極の位置関係という2つの特徴を、少ない計算量で効率的に捉えられるよう工夫されています。実験の結果、運動をイメージしたときの脳波や視覚に反応した脳波など、異なる種類の脳波タスクにおいて従来の手法と同等以上の高い認識精度を達成しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 605 influential</span>
+        <span class="cite">引用 2595</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1612.02177" target="_blank" rel="noopener">Deep Multi-scale Convolutional Neural Network for Dynamic Scene Deblurring</a>
+      </h2>
+      <p class="card-summary">手ブレや被写体の動きによって全体が不規則にブレてしまった写真から、鮮明な画像を復元する課題があります。従来の方法では「ブレ方は画面全体で均一である」といった単純な前提に頼っていたため、複雑な動きがある写真ではうまく補正できませんでした。この論文では、画像を粗いサイズから元のサイズへと段階的に修正していくマルチスケール（複数の縮尺で同時に処理する手法）なCNN（画像を格子状に処理するニューラルネットワーク）を提案しています。大きなブレの修正から細かいディテールの復元までを、ネットワークが一貫して自動的に学習します。動きのあるシーンを撮影したデータセットでの実験において、従来の手法よりも不自然なノイズを残さずにシャープな画像を復元できました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 567 influential</span>
+        <span class="cite">引用 5356</span>
+        <span class="year">2021</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2102.12122" target="_blank" rel="noopener">Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions</a>
+      </h2>
+      <p class="card-summary">自然言語処理で広く使われるTransformer（文中の単語同士の関係性を全体的に把握する仕組み）を画像向けに応用した技術が登場しましたが、物体の位置を細かく特定するタスクには不向きでした。画像全体を一括で大まかに分類することに特化しており、ピクセル単位での詳細な予測に必要な高解像度の情報をうまく扱えなかったためです。本論文では、畳み込み（画像を格子状に処理する演算）を一切使わずに、画像の解像度を段階的に小さくしながら特徴を抽出する「Pyramid Vision Transformer」を提案しました。ピラミッドのように異なる縮尺の特徴を同時に作成することで、細かい位置情報も保持できるようにしています。物体検出（画像内の物体の位置と種類を見つけるタスク）などの実験において、従来の畳み込みベースのモデルを上回る認識精度を達成しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 458 influential</span>
+        <span class="cite">引用 10034</span>
+        <span class="year">2009</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/3efd851140aa28e95221b55fcc5659eea97b172d" target="_blank" rel="noopener">The Graph Neural Network Model</a>
+      </h2>
+      <p class="card-summary">従来のニューラルネットワーク（人間の脳の神経回路を模した計算モデル）は、格子状の画像や表データのような規則的なデータしかうまく扱えませんでした。しかし、化学の分子構造や人と人とのつながりのように、要素同士が不規則に結びつくグラフ構造（点とそれを結ぶ線で表されるデータ）を直接扱うことが求められていました。そこで本論文では、グラフの構造をそのまま入力として受け取れる「Graph Neural Network」というモデルを提案しました。結ばれた点同士の間で情報を互いに伝達し合うことで、全体のネットワークの性質や各点の役割を学習します。化学分子の性質予測などの実験において、従来のグラフ解析手法や単純なネットワークよりも高い精度で予測できることを示しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 453 influential</span>
+        <span class="cite">引用 6206</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1609.05158" target="_blank" rel="noopener">Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network</a>
+      </h2>
+      <p class="card-summary">粗くてぼやけた低解像度の画像から、細部まで鮮明な高解像度画像を復元する超解像という技術があります。従来の深層学習手法は入力画像を前もって大きく引き伸ばしてから処理していたため、計算量が非常に多くなり、動画などのリアルタイム処理が困難でした。この論文では、計算の大部分を低解像度のまま行い、最後の層でピクセルを並べ替えて一気に拡大するサブピクセル畳み込み（小さな画像の特徴を再配置して高解像度化する手法）を提案しました。これにより、画質を保ちながら無駄な計算を大幅に削減することができます。実験の結果、従来モデルと同等の高い画質を維持しながら計算速度を飛躍的に高め、動画を毎秒多数のフレームでリアルタイムに超解像処理することに成功しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 422 influential</span>
+        <span class="cite">引用 3075</span>
+        <span class="year">2015</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1507.05717" target="_blank" rel="noopener">An End-to-End Trainable Neural Network for Image-Based Sequence Recognition and Its Application to Scene Text Recognition</a>
+      </h2>
+      <p class="card-summary">看板や街並みの写真に写っている文字列を読み取る際、文字の切れ目を特定して一文字ずつ切り離す作業が非常に難しいという課題がありました。この論文では、画像から文字を切り出すことなく、文字列全体を一度に読み取ることができる「CRNN」という新しいネットワークを提案しました。画像の特徴を抽出するCNN（画像を格子状に処理するニューラルネットワーク）と、文字の並び順の前後関係を捉えるRNN（連続したデータの文脈を扱うニューラルネットワーク）を組み合わせています。さらに、文字の区切り情報がなくても予測した文字列を単語へと正しく変換する仕組みを採用しました。実風景の文字認識データセットを用いた実験において、従来の手法よりも高速かつ高精度に街中のテキストを認識できることを実証しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 419 influential</span>
+        <span class="cite">引用 3540</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1608.00367" target="_blank" rel="noopener">Accelerating the Super-Resolution Convolutional Neural Network</a>
+      </h2>
+      <p class="card-summary">CNN（画像を格子状に処理するニューラルネットワーク）を用いた画像の超解像（粗い画像をきれいに拡大する技術）は高い画質を達成していましたが、計算が重く動画のようなリアルタイム処理ができませんでした。この論文では、処理速度を劇的に高速化するために「FSRCNN」という新しいネットワーク構造を提案しました。従来のように最初に入力画像を拡大するのではなく、低解像度のまま計算を行い、さらに中間層で情報量を一時的に絞り込む砂時計のような構造を採用しています。そして画像の拡大処理は、最後の層で逆畳み込み（小さくなったデータを元のサイズ以上に広げる処理）を用いて一度だけ行います。実験の結果、従来の超解像モデルよりも画質を向上させながら、計算速度を数十倍に加速してリアルタイムでの処理を達成しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 279 influential</span>
+        <span class="cite">引用 4444</span>
+        <span class="year">1996</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/a3885c13438132b516e5ffc8b640d20b4e41a7a4" target="_blank" rel="noopener">Neural network-based face detection</a>
+      </h2>
+      <p class="card-summary">任意の写真の中から、大きさや向き、照明の当たり方が異なる人間の顔を正確に見つけ出す顔検出という課題があります。背景の模様などを誤って顔だと判定してしまう「誤検出」を抑えつつ、様々なバリエーションの顔を見逃さずに見つけることが困難でした。この研究では、画像を小さく切り取った領域を入力とし、顔か顔でないかを自動判定するニューラルネットワーク（人間の脳の神経回路を模した計算モデル）を構築しました。さらに、複数のネットワークの判定を組み合わせるアンサンブル学習（複数のモデルの予測を統合して精度を上げる手法）や、誤判定した領域を再度学習させる仕組みを導入しました。多様な顔が含まれる複雑な写真のデータセットを用いた実験において、顔の見逃しを減らしながら誤検出も大幅に抑えた高精度な検出に成功しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 274 influential</span>
+        <span class="cite">引用 1934</span>
+        <span class="year">2021</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2106.11959" target="_blank" rel="noopener">Revisiting Deep Learning Models for Tabular Data</a>
+      </h2>
+      <p class="card-summary">この論文は、表データ（行と列で整理されたデータ）に対して深層学習（人間の脳を模した多層の計算モデル）をどう適用すべきかを検証した研究です。表データ向けの深層学習モデルは数多く提案されていましたが、比較条件が揃っておらず、どの手法が本当に優れているのかが不明瞭でした。そこで著者らは、標準的な多層パーセプトロンや、最新のTransformer（データの重要部分に注目する構造）を使ったモデル、そして従来のGBDT（決定木という条件分岐を組み合わせて予測する手法）を同一の基準で徹底的に比較しました。その結果、表データにおいては依然としてGBDTが非常に強力であり、深層学習モデルは必ずしもそれを上回るわけではないことが明らかになりました。ただし、適切に調整したTransformer系のモデルはGBDTに迫る高い性能を示すことも確認されました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 153 influential</span>
+        <span class="cite">引用 1574</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1607.07155" target="_blank" rel="noopener">A Unified Multi-scale Deep Convolutional Neural Network for Fast Object Detection</a>
+      </h2>
+      <p class="card-summary">この論文は、画像の中から大小さまざまな大きさの物体を、高速かつ正確に見つけ出す課題に取り組んだ研究です。従来の物体検出手法では、画像全体から物体の候補領域を探し出す処理と、それが何かを識別する処理が分かれており、計算に時間がかかる問題がありました。そこで著者らは、MS-CNN（画像の異なる解像度の特徴を同時に活用するニューラルネットワーク）という統合的なモデルを提案しました。このモデルは、ネットワークの浅い層で小さな物体を、深い層で大きな物体を捉えるように設計されています。実験の結果、自動運転向けなどの画像データセットにおいて、高い検出精度を維持しながらリアルタイムに近い速度で物体を検出できることが実証されました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 138 influential</span>
+        <span class="cite">引用 2316</span>
+        <span class="year">2020</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/725264948d7b6946259af5b8d966e996b9570f99" target="_blank" rel="noopener">DeepSpeed: System Optimizations Enable Training Deep Learning Models with Over 100 Billion Parameters</a>
+      </h2>
+      <p class="card-summary">この論文は、1000億個を超える膨大なパラメータ（モデルが学習する調整値）を持つ超巨大な深層学習モデルを、効率よく学習させるためのシステム開発に関する研究です。モデルが巨大化すると、コンピュータのメモリ不足や計算速度の低下が深刻な問題となります。マイクロソフトの研究チームは、ZeRO（モデルの計算データを複数の機器に重複なく分散配置する最適化技術）を取り入れた「DeepSpeed」というソフトウェアを開発しました。これにより、各計算機器のメモリを無駄なく使い、従来よりも大幅に少ないハードウェア資源で巨大なモデルを扱えるようにしました。実験では、1000億パラメータ規模の超巨大モデルを、既存手法と比べて数倍の高速性と低いコストで安定して学習できることを示しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 131 influential</span>
+        <span class="cite">引用 1221</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/c382406fd8db2744b2a609837395e5da05e1d2ed" target="_blank" rel="noopener">Going Deeper with Embedded FPGA Platform for Convolutional Neural Network</a>
+      </h2>
+      <p class="card-summary">この論文は、スマートフォンや車載機器などの小型端末（組み込み機器）において、画像認識を行うCNN（画像を格子状に処理するニューラルネットワーク）を高速かつ省電力に動かすことを目指した研究です。深い層を持つCNNは計算量と消費電力が大きく、限られた電力や回路規模しか持たない機器で動かすのは困難でした。著者らは、回路を書き換え可能な半導体であるFPGAを用い、CNNの計算処理に特化した専用ハードウェア設計を行いました。さらに、計算の精度を必要最低限に抑える量子化（数値を粗い桁数で表現して計算を軽くする手法）を適用しました。実験の結果、一般的なGPU（画像処理用プロセッサ）と比較して、はるかに低い消費電力でありながら実用的な速度で深いニューラルネットワークを実行できることを確認しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 126 influential</span>
+        <span class="cite">引用 1243</span>
+        <span class="year">2019</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1906.10771" target="_blank" rel="noopener">Importance Estimation for Neural Network Pruning</a>
+      </h2>
+      <p class="card-summary">この論文は、ニューラルネットワークを小型化・高速化するために、不要なパラメータを削ぎ落とす「枝刈り（プルーニング）」の技術を改良した研究です。モデルからどの計算部分を削除すれば性能を落とさずに軽量化できるかを正確に判断することは難しい課題でした。著者らは、ニューロン（計算の基本単位）を取り除いた際に、モデルの予測誤差（損失）がどれだけ増えるかを数学的に見積もる指標を考案しました。具体的には、テイラー展開（複雑な関数の変化を簡単な計算式で近似する数学の手法）を使って、各ニューロンの重要度を効率よく計算します。実験では、画像認識のモデルに対してこの手法を適用し、予測精度をほとんど損なうことなく、モデルのサイズと計算量を大幅に削減することに成功しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 115 influential</span>
+        <span class="cite">引用 1768</span>
+        <span class="year">2021</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2103.13630" target="_blank" rel="noopener">A Survey of Quantization Methods for Efficient Neural Network Inference</a>
+      </h2>
+      <p class="card-summary">この論文は、深層学習モデルの計算を軽くしてスマートフォンなどの小型機器で動かすための技術である「量子化」について体系的にまとめた解説論文です。深層学習モデルは通常、細かな小数（32ビット浮動小数点数）を使って計算を行いますが、これは多くのメモリと電力を消費します。量子化とは、これらの数値をより少ないビット数（例えば8ビットや4ビットの整数）に圧縮して計算を高速化する手法です。本論文では、モデルの学習後に数値を丸める手法や、量子化による誤差を想定しながら学習を進める手法など、多様な技術の長所と短所を網羅的に分類しました。その結果、目的に応じてどの量子化手法を選べば、予測精度を保ちつつメモリ消費や推論時間を削減できるかの指針を示しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 106 influential</span>
+        <span class="cite">引用 1184</span>
+        <span class="year">2020</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2006.09963" target="_blank" rel="noopener">GCC: Graph Contrastive Coding for Graph Neural Network Pre-Training</a>
+      </h2>
+      <p class="card-summary">この論文は、グラフデータ（人やモノのつながりを点と線で表したデータ）を解析するAIにおいて、一度学習した知識を別の種類のグラフにも再利用できるようにする研究です。従来のグラフ向けAIは、特定のネットワーク（例えば特定のSNS）ごとに個別に学習する必要があり、異なるデータへ応用することが困難でした。著者らはGCCという手法を開発し、グラフの局所的なトポロジー（点と線のつながり方のパターン）のみに注目して事前学習を行いました。この学習には対照学習（似た構造同士の距離を縮め、異なる構造を遠ざける学習方法）が用いられています。実験では、事前の知識を持たない未知のグラフに対しても、少ない追加データでノード（点）の分類やグラフ全体の識別を高精度に行えることを確認しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 102 influential</span>
+        <span class="cite">引用 426</span>
+        <span class="year">2019</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1911.13299" target="_blank" rel="noopener">What’s Hidden in a Randomly Weighted Neural Network?</a>
+      </h2>
+      <p class="card-summary">この論文は、AIが学習を行う仕組みの根本的な謎に迫った研究です。通常、ニューラルネットワークは重み（計算の強さを決める数値）を少しずつ更新して賢くなりますが、重みを一切変更しなくても高い性能を出せるかという問いを検証しました。著者らは、サイコロを振るようにランダムな重みを設定したネットワークの中に、すでに優れた性能を持つ「部分回路（サブネットワーク）」が隠れていることを示しました。そして、重み自体は一切変更せず、不要な接続をオフにして適切な部分回路だけを見つけ出すアルゴリズムを提案しました。実験の結果、重みを一度も学習していない巨大なランダムモデルの中から、通常通り学習させた標準的なモデルと同等に画像を正しく認識できる部分回路を抽出できることを実証しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 100 influential</span>
+        <span class="cite">引用 1052</span>
+        <span class="year">2020</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/309fd887dc776db182ba054c979b37738a2bee07" target="_blank" rel="noopener">Earthquake transformer—an attentive deep-learning model for simultaneous earthquake detection and phase picking</a>
+      </h2>
+      <p class="card-summary">この論文は、地震計が記録した波形データから、地震の発生を検知し、波の到達時刻を正確に特定する深層学習モデル「Earthquake transformer」を提案した研究です。微小な地震は背景の雑音（ノイズ）に埋もれやすく、P波（初期微動）やS波（主要動）がいつ届いたかを自動で正確に見分けることは困難でした。著者らは、Transformer（波形の重要な区間に自動で注目する機構）を活用し、波形全体の大きな特徴と、波の立ち上がりなどの細かな局所的特徴を同時に捉える仕組みを構築しました。これにより、地震の検知と波の種類の判定を一度に行うことができます。実験では、従来の自動解析システムや専門家による目視解析よりも、ノイズが多い環境下で微小な地震を高精度に検出できることを確認しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 94 influential</span>
+        <span class="cite">引用 1212</span>
+        <span class="year">2022</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2201.07284" target="_blank" rel="noopener">TranAD: Deep Transformer Networks for Anomaly Detection in Multivariate Time Series Data</a>
+      </h2>
+      <p class="card-summary">この論文は、工場のセンサー群などから得られる多変量時系列データ（複数のセンサーが時間とともに記録したデータ）から、素早く異常を検知する手法「TranAD」を提案した研究です。産業現場では、異常なデータが滅多に発生しないため事前の正解ラベルが少なく、さらに異常を瞬時に検知しなければ大事故につながるという難しさがありました。著者らは、Transformer（時間的な変化のパターンを広く捉える構造）をベースに、敵対的学習（2つのネットワークを競わせて精度を磨く手法）を組み込んだ軽量なモデルを開発しました。これにより、過去の正常なパターンとのわずかなズレを高速に算出できます。複数の実世界のデータセットを用いた実験において、従来の手法よりも極めて短い計算時間で、見逃しなく正確に異常を特定できることを実証しました。</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 88 influential</span>
+        <span class="cite">引用 981</span>
+        <span class="year">2017</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1702.02284" target="_blank" rel="noopener">Adversarial Attacks on Neural Network Policies</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 77 influential</span>
+        <span class="cite">引用 515</span>
+        <span class="year">2019</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1904.08298" target="_blank" rel="noopener">Events-To-Video: Bringing Modern Computer Vision to Event Cameras</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 73 influential</span>
+        <span class="cite">引用 999</span>
+        <span class="year">2021</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2107.06263" target="_blank" rel="noopener">CMT: Convolutional Neural Networks Meet Vision Transformers</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 65 influential</span>
+        <span class="cite">引用 679</span>
+        <span class="year">2023</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/35a8c483ed0641ebbb56da1bd2d0f188b000a8ca" target="_blank" rel="noopener">RETROSPECTIVE:PRIME: A Novel Processing-in-memory Architecture for Neural Network Computation in ReRAM-based Main Memory</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 64 influential</span>
+        <span class="cite">引用 1275</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1605.07678" target="_blank" rel="noopener">An Analysis of Deep Neural Network Models for Practical Applications</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 56 influential</span>
+        <span class="cite">引用 956</span>
+        <span class="year">2020</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2003.01251" target="_blank" rel="noopener">Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 46 influential</span>
+        <span class="cite">引用 735</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/1609.02132" target="_blank" rel="noopener">UberNet: Training a Universal Convolutional Neural Network for Low-, Mid-, and High-Level Vision Using Diverse Datasets and Limited Memory</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 45 influential</span>
+        <span class="cite">引用 1186</span>
+        <span class="year">2016</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/03aca587f27fda3cbdad708aa69c07fc71b691d7" target="_blank" rel="noopener">Lung Pattern Classification for Interstitial Lung Diseases Using a Deep Convolutional Neural Network</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 37 influential</span>
+        <span class="cite">引用 1034</span>
+        <span class="year">2021</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://arxiv.org/abs/2101.09671" target="_blank" rel="noopener">Pruning and Quantization for Deep Neural Network Acceleration: A Survey</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
+    <article class="card">
+      <div class="card-meta">
+        <span class="score">★ 32 influential</span>
+        <span class="cite">引用 380</span>
+        <span class="year">2019</span>
+        <span class="added">追加: 2026-10-24</span>
+      </div>
+      <h2 class="card-title">
+        <a href="https://www.semanticscholar.org/paper/4ef6bf7578dcf3e28b462cd95a748e71c0ecf2ee" target="_blank" rel="noopener">Multilayer Convolution Neural Network for the Classification of Mango Leaves Infected by Anthracnose Disease</a>
+      </h2>
+      <p class="card-summary">（要約なし）</p>
+    </article>
 </div>
 </body>
 </html>
