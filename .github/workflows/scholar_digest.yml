@@ -2,14 +2,14 @@ name: Scholar Digest → AI論文まとめページ
 
 on:
   schedule:
-    # 毎日 10:00 JST (= 01:00 UTC) に実行
-    - cron: "0 1 * * *"
+    # 10:00/16:00/22:00/04:00 JST (= 01:00/07:00/13:00/19:00 UTC)
+    - cron: "0 1,7,13,19 * * *"
   workflow_dispatch:
 
 jobs:
   scholar-digest:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -27,6 +27,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
         run: python scholar_digest.py
 
       - name: Commit and push updated pages
