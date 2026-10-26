@@ -24,8 +24,6 @@ GEMINI_MODEL = "gemini-3.8-flash"
 PAPERS_PER_RUN = 30
 DOCS_DIR = Path("docs")
 PAPERS_JSON = DOCS_DIR / "papers.json"
-PAGES_URL = "https://yoichikawa.github.io/arxiv-digest/"
-
 SS_QUERIES = [
     "deep learning neural network",
     "large language model transformer",
@@ -518,48 +516,9 @@ body{{
 </body>
 </html>"""
 
-# ── Slack ──────────────────────────────────────────────────────────────────────────────────
-
-def post_to_slack(webhook_url: str, new_papers: list[dict]) -> None:
-    date_str = datetime.now(JST).strftime("%Y年%m月%d日")
-    blocks = [
-        {
-            "type": "header",
-            "text": {"type": "plain_text", "text": f"📚 AI論文まとめ 新着 — {date_str}"},
-        },
-        {
-            "type": "context",
-            "elements": [{"type": "mrkdwn", "text": f"<{PAGES_URL}|📄 まとめページで全論文を見る>"}],
-        },
-        {"type": "divider"},
-    ]
-    for p in new_papers:
-        summary = p.get("summary", "（要約なし）")
-        blocks.append({
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": "\n".join([
-                    f"*{p['title']}* ({p.get('year','')})",
-                    f"📅 投稿: {p.get('published', p.get('year',''))}",
-                    summary,
-                ]),
-            },
-        })
-        blocks.append({
-            "type": "context",
-            "elements": [{"type": "mrkdwn", "text": f"<{p['url']}|論文を読む>"}],
-        })
-        blocks.append({"type": "divider"})
-
-    resp = requests.post(webhook_url, json={"blocks": blocks[:50]}, timeout=15)
-    resp.raise_for_status()
-    print("Slack post OK.")
-
 # ── Main ──────────────────────────────────────────────────────────────────────────────────
 
 def main():
-    webhook = os.environ.get("SLACK_WEBHOOK_URL")
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         sys.exit("Error: GEMINI_API_KEY is not set.")
@@ -629,14 +588,6 @@ def main():
     (DOCS_DIR / "index.html").write_text(html, encoding="utf-8")
     print("docs/index.html generated.")
 
-    if new_papers:
-        if webhook:
-            try:
-                post_to_slack(webhook, new_papers[:15])
-            except Exception as e:
-                print(f"Slack post failed (non-fatal): {e}")
-        else:
-            print("SLACK_WEBHOOK_URL not set, skipping Slack post.")
 
 if __name__ == "__main__":
     main()
