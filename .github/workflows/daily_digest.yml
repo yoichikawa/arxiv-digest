@@ -1,10 +1,6 @@
 name: Daily ArXiv Digest → GitHub Pages + Slack
 
 on:
-  schedule:
-    # 毎日 13:00 JST (= 04:00 UTC) に実行
-    - cron: "0 4 * * *"
-  # 手動テスト: GitHub UI の Actions タブ → "Run workflow"
   workflow_dispatch:
 
 # docs/ への書き込みと GitHub Pages デプロイに必要
