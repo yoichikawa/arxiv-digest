@@ -11712,5 +11712,845 @@
       }
     ],
     "addedDate": "2026-11-25"
+  },
+  {
+    "paperId": "6114ffe861be0814f94fa3eeb0f45563998d2f16",
+    "arxivId": "",
+    "title": "Detection and diagnosis of dental caries using a deep learning-based convolutional neural network algorithm.",
+    "year": 2018,
+    "published": "2018-10-01",
+    "categories": [],
+    "citationCount": 922,
+    "influentialCitationCount": 54,
+    "url": "https://www.semanticscholar.org/paper/6114ffe861be0814f94fa3eeb0f45563998d2f16",
+    "summary": "歯科医療において、虫歯の早期発見は患者の歯を残すためにとても重要ですが、X線写真からの診断は見落としや医師ごとのばらつきが生じやすい課題があります。この研究では、デンタルX線写真から虫歯を自動検出するために画像認識が得意な畳み込みニューラルネットワーク（CNN）を活用しました。研究チームは3000枚のX線画像を集め、AIの学習用と評価用に分けて診断モデルを訓練しました。実験の結果、AIは小臼歯や大臼歯などの部位において、高い精度で虫歯を検出できることが確認されました。このシステムにより、歯科医師の診断支援や見落とし防止が期待されます。",
+    "terms": {
+      "畳み込みニューラルネットワーク（CNN）": "画像の特徴（輪郭や模様など）を抽出して分析することに長けた深層学習の仕組みです。",
+      "デンタルX線写真": "歯やその周りの骨の状態を詳細に確認するために撮影される、歯科専用のX線画像のことです。",
+      "う蝕（虫歯）": "口の中の細菌が作り出す酸によって歯が溶かされてしまう病気のことです。"
+    },
+    "formulas": [
+      {
+        "expression": "\\text{Accuracy} = \\frac{TP + TN}{TP + TN + FP + FN}",
+        "meaning": "正解率を表す式で、AIが虫歯の有無を全体の中でどれだけ正しく判定できたかの割合を示します。"
+      },
+      {
+        "expression": "\\text{Sensitivity} = \\frac{TP}{TP + FN}",
+        "meaning": "感度（再現率）を表す式で、実際に虫歯がある歯のうち、AIが正しく虫歯と診断できた割合を示します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "547552a62423b9eb1aab2ff6c6f87f4fbcd89362",
+    "arxivId": "",
+    "title": "Extended Physics-informed Neural Networks (XPINNs): A Generalized Space-Time Domain Decomposition based Deep Learning Framework for Nonlinear Partial Differential Equations",
+    "year": 2020,
+    "published": "2020-06-01",
+    "categories": [],
+    "citationCount": 1315,
+    "influentialCitationCount": 43,
+    "url": "https://www.semanticscholar.org/paper/547552a62423b9eb1aab2ff6c6f87f4fbcd89362",
+    "summary": "物理法則を取り入れたAIモデルであるPINNは、複雑な形状の物体や激しい流れなどを解く際に計算が難しくなるという課題を抱えていました。そこで本研究では、空間や時間を複数の領域に分割して効率よく解く「XPINNs」という新しい枠組みを提案しました。この手法では、領域ごとに別々のニューラルネットワークを割り当てて同時に並列計算を行い、領域同士の境界で条件を滑らかにつなぎ合わせます。実験では、複雑な形状や非線形な物理現象に対しても高精度かつ高速に解を求められることが実証されました。これにより、流体力学や熱伝導など幅広い科学技術計算の高速化が期待できます。",
+    "terms": {
+      "PINN（物理情報ニューラルネットワーク）": "物理の法則（方程式）をAIの学習ルールとして組み込み、データが少なくても現象を予測できる深層学習手法です。",
+      "偏微分方程式（PDE）": "熱の広がりや液体の流れなど、時間や空間によって刻々と変化する自然現象を数式で表したものです。",
+      "領域分割法": "解きたい大きな空間をいくつかの小さなブロックに小分けにして、計算を簡単かつ並行して行えるようにする手法です。"
+    },
+    "formulas": [
+      {
+        "expression": "\\mathcal{L}_{\\text{residual}} = \\frac{1}{N} \\sum_{i=1}^{N} |f(x_i, t_i)|^2",
+        "meaning": "AIの予測が物理方程式をどれくらい満たしているかを示す誤差（残差）の式です。"
+      },
+      {
+        "expression": "\\mathcal{L}_{\\text{interface}} = \\sum_{\\text{boundary}} |u_1 - u_2|^2",
+        "meaning": "分割した領域同士の境目で、互いの計算結果が食い違わずに滑らかにつながっているかを評価する損失の式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "be6f631136daf47ea63b9d3f57313bd5329be37a",
+    "arxivId": "",
+    "title": "Classification using deep learning neural networks for brain tumors",
+    "year": 2017,
+    "published": "2017-12-24",
+    "categories": [],
+    "citationCount": 952,
+    "influentialCitationCount": 40,
+    "url": "https://www.semanticscholar.org/paper/be6f631136daf47ea63b9d3f57313bd5329be37a",
+    "summary": "脳腫瘍は早期に発見し正確に分類することが治療計画を立てる上で非常に重要ですが、MRI画像からの目視判断には専門知識と労力が必要です。この研究では、深層学習を用いた分類器を使って脳腫瘍の種類を自動判別する手法を提案しました。研究チームは66枚の脳MRI画像を収集し、正常、膠芽腫、肉腫、転移性肺がんの4つのグループに分類するモデルを構築しました。画像の特徴を取り出す技術とディープニューラルネットワークを組み合わせることで、高い分類精度を達成しました。これにより、医師の診断を補助し、迅速な治療方針の決定に役立つことが期待されます。",
+    "terms": {
+      "MRI（磁気共鳴画像法）": "強力な磁石と電波を利用して、体の断面を鮮明な画像として撮影する医療検査法です。",
+      "ディープニューラルネットワーク（DNN）": "人間の脳の神経回路を模した層を何重にも重ねることで、複雑なパターンを学習できるAIモデルです。",
+      "分類（Classification）": "入力されたデータ（画像など）が、あらかじめ決められたどのカテゴリーに属するかを予測するタスクです。"
+    },
+    "formulas": [
+      {
+        "expression": "P(y = k \\mid x) = \\frac{e^{z_k}}{\\sum_{j=1}^{K} e^{z_j}}",
+        "meaning": "ソフトマックス関数と呼ばれ、AIが出力した数値を各腫瘍タイプに該当する確率（合計が100%になる形）に変換する式です。"
+      },
+      {
+        "expression": "\\mathcal{L} = -\\sum_{k=1}^K y_k \\log(\\hat{y}_k)",
+        "meaning": "交差エントロピー誤差と呼ばれ、AIの予測確率と実際の病気の種類のズレを計算して学習を進めるための損失関数です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "a9353d6b06e21d05d443059daa7f906c68d62fda",
+    "arxivId": "2505.22705",
+    "title": "HiDream-I1: A High-Efficient Image Generative Foundation Model with Sparse Diffusion Transformer",
+    "year": 2025,
+    "published": "2025-05-28",
+    "categories": [],
+    "citationCount": 168,
+    "influentialCitationCount": 26,
+    "url": "https://arxiv.org/abs/2505.22705",
+    "summary": "近年の画像生成AIは非常にリアルな画像を生成できるようになった一方で、モデルが巨大化して生成に時間がかかるという問題がありました。この論文では、170億個のパラメータを持ちながら、わずか数秒で極めて高品質な画像を生成できる「HiDream-I1」を提案しています。このモデルは、計算量を大幅に削減できる疎（スパース）構造を取り入れた新しい「Diffusion Transformer」を採用しています。無駄な計算を省く設計により、生成の質を落とさずに処理の待ち時間を劇的に短縮することに成功しました。この成果により、プロレベルの画像生成をストレスなくリアルタイムで利用できる環境が実現します。",
+    "terms": {
+      "基盤モデル（Foundation Model）": "膨大なデータであらかじめ学習され、多様な用途に幅広く応用できる大規模なAIモデルのことです。",
+      "Diffusion Transformer（DiT）": "画像生成で主流の拡散モデルに、言語モデルなどで使われるTransformer構造を組み合わせたアーキテクチャです。",
+      "スパース（疎）計算": "すべてのデータを均一に処理するのではなく、重要な部分だけに絞って計算することで効率を高める仕組みです。"
+    },
+    "formulas": [
+      {
+        "expression": "x_{t-1} = \\frac{1}{\\sqrt{\\alpha_t}} \\left( x_t - \\frac{1 - \\alpha_t}{\\sqrt{1 - \\bar{\\alpha}_t}} \\epsilon_\\theta(x_t, t) \\right) + \\sigma_t z",
+        "meaning": "拡散モデルにおいて、ノイズ混じりの画像から少しずつノイズを取り除き、鮮明な画像を復元していく基本の計算式です。"
+      },
+      {
+        "expression": "\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V",
+        "meaning": "Transformerが画像内の異なる領域同士の関係性の強さを計算し、どこに注目すべきかを決める計算式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "41652069c6a9c26e1366c8146005478ebd1e4cb0",
+    "arxivId": "2402.03908",
+    "title": "EscherNet: A Generative Model for Scalable View Synthesis",
+    "year": 2024,
+    "published": "2024-02-06",
+    "categories": [],
+    "citationCount": 146,
+    "influentialCitationCount": 26,
+    "url": "https://arxiv.org/abs/2402.03908",
+    "summary": "数枚の写真から新しい角度の見た目を予測して作り出す「視点合成」は、3D空間を再現するために欠かせない技術です。本論文が提案する「EscherNet」は、複数の参考画像をもとに自由なカメラ角度からの画像を生成する拡散モデルです。この手法では、カメラの位置情報を細かくエンコードしてモデルに伝えることで、カメラの連続的かつ精密な移動を忠実に再現します。実験では、1台のGPU上で互いに矛盾のない100枚以上の異なる視点画像を同時に生成することに成功しました。これにより、映画制作やゲーム、VRなどの3D空間構築がより手軽に行えるようになります。",
+    "terms": {
+      "視点合成（View Synthesis）": "既存の写真から、カメラの位置や角度を変えたときにどのように見えるかをAIで新しく作り出す技術です。",
+      "カメラ位置エンコーディング": "カメラの向きや位置の情報を数値に変換し、AIが理解しやすい形式で入力する技術です。",
+      "拡散モデル（Diffusion Model）": "ノイズだらけの状態から徐々にノイズを除去していくことで、元のきれいなデータを生成するAIの仕組みです。"
+    },
+    "formulas": [
+      {
+        "expression": "\\mathbf{T}_{\\text{rel}} = \\mathbf{E}_{\\text{target}} \\mathbf{E}_{\\text{ref}}^{-1}",
+        "meaning": "参照する視点のカメラ位置から目標とする視点のカメラ位置への相対的な移動量を表す式です。"
+      },
+      {
+        "expression": "\\mathcal{L}_{\\text{diff}} = \\mathbb{E}_{x_0, t, \\epsilon} \\left[ \\| \\epsilon - \\epsilon_\\theta(x_t, t, \\mathbf{c}) \\|^2 \\right]",
+        "meaning": "カメラ位置などの条件情報 c をもとに、AIが画像に含まれるノイズをどれだけ正確に予測できたかを測る誤差関数です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "f1e5a1f1334a447a105ee8befba6d0dbea9c73ea",
+    "arxivId": "",
+    "title": "Conceptual Understanding of Convolutional Neural Network- A Deep Learning Approach",
+    "year": 2018,
+    "published": "2018",
+    "categories": [],
+    "citationCount": 668,
+    "influentialCitationCount": 25,
+    "url": "https://www.semanticscholar.org/paper/f1e5a1f1334a447a105ee8befba6d0dbea9c73ea",
+    "summary": "深層学習は人工知能の発展において中心的な役割を果たしており、中でも畳み込みニューラルネットワーク（CNN）は画像処理分野で広く使われています。従来の機械学習手法では人間が手作業で画像の特徴を設計する必要がありましたが、CNNはその限界を克服しました。この論文は、初心者に向けてCNNの基本的な概念や仕組みをわかりやすく整理・解説したレビュー論文です。代表的な3つのネットワーク構造（LeNet、AlexNet、VGGなど）の比較や、モデルが賢くなる学習の仕組みについて体系的に紹介しています。これから画像認識AIを学び始める人にとって、全体像を把握するための手引きとなる内容です。",
+    "terms": {
+      "畳み込み層（Convolutional Layer）": "画像全体にフィルターを滑らせるように適用し、輪郭やテクスチャなどの特徴を取り出す層です。",
+      "プーリング層（Pooling Layer）": "画像の特徴を保ったまま画像サイズを縮小し、計算量を減らしつつ位置のズレに強くする層です。",
+      "全結合層（Fully Connected Layer）": "取り出された画像の特徴をすべてまとめて結びつけ、最終的に何の画像かを判断する層です。"
+    },
+    "formulas": [
+      {
+        "expression": "y_{i,j} = \\sum_{m} \\sum_{n} x_{i+m, j+n} \\cdot w_{m,n} + b",
+        "meaning": "畳み込み計算の基本式で、入力画像の一部とフィルターの重みを掛け合わせて足し算し、特徴を抽出する様子を示しています。"
+      },
+      {
+        "expression": "f(x) = \\max(0, x)",
+        "meaning": "ReLU関数と呼ばれる活性化関数で、入力が0以下のときは0を出力し、0より大きいときはそのまま通すことで学習を効率化します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "2cb1cb8107e84ff191b5f7fdbbf435ae97c26075",
+    "arxivId": "2401.15563",
+    "title": "BrepGen: A B-rep Generative Diffusion Model with Structured Latent Geometry",
+    "year": 2024,
+    "published": "2024-01-28",
+    "categories": [],
+    "citationCount": 194,
+    "influentialCitationCount": 25,
+    "url": "https://arxiv.org/abs/2401.15563",
+    "summary": "工業製品の設計に使われるCADデータは、面や線、頂点の厳密なつながりで構成される境界表現（B-rep）形式が標準ですが、構造が複雑なためAIでの直接生成は困難でした。本論文で提案された「BrepGen」は、CADモデルを直接生成できる新しい拡散ベースの生成モデルです。この手法では、CADデータを「全体→面→線→頂点」という木構造の親子関係として整理し、AIが扱いやすい幾何学データに変換します。実験により、トポロジー（接続関係）の破綻がない、実際に製造現場でそのまま使える高品質な3Dモデルを自動生成できることが示されました。これにより、製品設計の自動化やデザイン案の効率的な作成が前進します。",
+    "terms": {
+      "B-rep（境界表現）": "立体物の形状を、表面を囲む面・辺・頂点といった境界情報の集まりとして厳密に表現するCADの標準方式です。",
+      "CAD（コンピュータ支援設計）": "コンピュータ上で機械や建築物などの正確な図面や立体モデルを作成するツールのことです。",
+      "トポロジー": "頂点や辺、面がどのように互いにつながり合っているかという接続関係のことです。"
+    },
+    "formulas": [
+      {
+        "expression": "S_{\\text{CAD}} = (V, E, F)",
+        "meaning": "CADモデルが頂点集合 V、辺集合 E、面集合 F の幾何学要素と接続関係によって構成されていることを表す記号です。"
+      },
+      {
+        "expression": "p(x_0) = \\int p(x_T) \\prod_{t=1}^T p_\\theta(x_{t-1} \\mid x_t) \\, dx_{1:T}",
+        "meaning": "ランダムなノイズから順を追って面や辺の配置を復元し、CADの木構造モデルを生成する確率過程を表す式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "580feba08d6586812ff7d5ba905e7fc0e6cdc140",
+    "arxivId": "",
+    "title": "Comparing the prediction performance of a Deep Learning Neural Network model with conventional machine learning models in landslide susceptibility assessment",
+    "year": 2020,
+    "published": "2020-05-01",
+    "categories": [],
+    "citationCount": 437,
+    "influentialCitationCount": 22,
+    "url": "https://www.semanticscholar.org/paper/580feba08d6586812ff7d5ba905e7fc0e6cdc140",
+    "summary": "大雨や地震による地滑りは甚大な被害をもたらすため、事前にどの地域が危険かを予測するハザードマップの作成が不可欠です。この研究では、地滑りの発生しやすさを評価するために深層学習（DLNN）モデルを導入し、従来の機械学習手法と予測精度を比較しました。研究対象として地滑りが多発するベトナムのコントゥム省を選び、標高、斜面の傾斜、土地利用、植生指数など9つの地形・環境データを収集しました。実験の結果、深層学習モデルはサポートベクターマシンなどの従来手法を上回る高い予測性能を示しました。これにより、より精度の高い防災計画や避難対策の策定に役立つと期待されます。",
+    "terms": {
+      "地滑り感受性評価": "地形や地質、植物の生え方などのデータから、ある地域が地滑りを起こしやすい場所かどうかを割り出す分析のことです。",
+      "NDVI（正規化植生指数）": "人工衛星の観測データなどから、その土地に植物がどれくらい生い茂っているかを数値化した指標です。",
+      "ROC曲線下面積（AUC）": "予測モデルの性能を測る数値で、1に近いほど危険な場所と安全な場所を正しく見分けられていることを意味します。"
+    },
+    "formulas": [
+      {
+        "expression": "\\text{NDVI} = \\frac{\\text{NIR} - \\text{Red}}{\\text{NIR} + \\text{Red}}",
+        "meaning": "近赤外光と赤色光の反射の差を使って、地表の植物の生い茂り具合を計算する式です。"
+      },
+      {
+        "expression": "\\text{AUC} = \\int_{0}^{1} \\text{TPR}(\\text{FPR}) \\, d(\\text{FPR})",
+        "meaning": "地滑り予測モデルが全体としてどれだけ優秀かを0から1の値で評価するための計算式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "d94ece58b60bfb0572820ca2943c70febc0cfa09",
+    "arxivId": "",
+    "title": "Deep learning based diagnosis of Parkinson’s disease using convolutional neural network",
+    "year": 2019,
+    "published": "2019-03-21",
+    "categories": [],
+    "citationCount": 249,
+    "influentialCitationCount": 22,
+    "url": "https://www.semanticscholar.org/paper/d94ece58b60bfb0572820ca2943c70febc0cfa09",
+    "summary": "パーキンソン病は手足の震えや体の動かしにくさが徐々に進行する神経の病気ですが、早期発見が難しく医師の目視診断に頼る部分が大きいのが現状です。この研究では、画像認識に優れた畳み込みニューラルネットワーク（CNN）を用いて、パーキンソン病の診断を自動化・支援する仕組みを開発しました。患者の手書きの螺旋（らせん）描画テスト画像や歩行データなどをAIに読み込ませ、微小な異常パターンを学習させました。実験の結果、AIは健康な人とパーキンソン病患者のデータを高精度で識別できることが示されました。この技術により、専門医が少ない地域でも簡単かつ迅速に初期スクリーニング検査を行える可能性があります。",
+    "terms": {
+      "パーキンソン病": "脳の神経伝達物質が減少することで、手足の震えや運動の鈍さが引き起こされる進行性の病気です。",
+      "手書き描画テスト": "患者に渦巻き（螺旋）や波線を描いてもらい、線の乱れや手の震え具合からパーキンソン病の兆候を調べる検査です。",
+      "スクリーニング": "多くの人の中から、病気の疑いがある人を早期に見つけ出すためのふるい分け検査のことです。"
+    },
+    "formulas": [
+      {
+        "expression": "\\text{Loss} = -\\frac{1}{N} \\sum_{i=1}^N \\left( y_i \\log(p_i) + (1 - y_i) \\log(1 - p_i) \\right)",
+        "meaning": "患者か健康な人かの2択を判定する際に、AIの予測と正解との食い違いを計算する誤差関数です。"
+      },
+      {
+        "expression": "\\hat{y} = \\sigma(W x + b)",
+        "meaning": "抽出した画像の特徴 x に重み W を掛けて数値を計算し、病気である確率を出力する基本的なニューラルネットワークの計算式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "6f121e4188d1635568c0b73627c0acf6b251554a",
+    "arxivId": "2312.03687",
+    "title": "MatterGen: a generative model for inorganic materials design",
+    "year": 2023,
+    "published": "2023-12-06",
+    "categories": [],
+    "citationCount": 178,
+    "influentialCitationCount": 22,
+    "url": "https://arxiv.org/abs/2312.03687",
+    "summary": "電池の長寿命化や二酸化炭素の回収など、クリーンエネルギー技術の発展には新しい無機材料の開発が強く求められています。従来の材料発見は実験の試行錯誤に依存しており膨大な時間がかかっていましたが、本論文では望みの性質を持つ材料をAIが直接設計する「MatterGen」を提案しました。このモデルは結晶構造を生成する拡散モデルであり、原子の種類、並び方、格子の形状を同時に生成します。「高い熱伝導率」などの条件を入力すると、その性質を満たす安定した新しい結晶構造を高い成功率で作り出すことができます。この成果は、新素材の開発期間を大幅に短縮し、次世代の環境技術を後押しすると期待されます。",
+    "terms": {
+      "無機材料": "金属やセラミックス、鉱物など、炭素を中心とした有機物以外の物質のことで、電池や半導体などに使われます。",
+      "結晶構造": "原子が規則正しく並んだ立体の構造のことで、材料の強度や電気の流れやすさを決定づけます。",
+      "逆設計（Inverse Design）": "欲しい材料の性能や特性を最初に指定し、それを実現できる物質の構造をAIに逆算させて発見する手法です。"
+    },
+    "formulas": [
+      {
+        "expression": "\\mathbf{X} = (\\mathbf{R}, \\mathbf{A}, \\mathbf{L})",
+        "meaning": "材料の結晶構造を、各原子の位置 R、原子の種類 A、結晶格子のサイズと傾き L の3要素で表現した数式です。"
+      },
+      {
+        "expression": "\\nabla_{\\mathbf{X}} \\log p(\\mathbf{X} \\mid \\mathbf{c}) = \\nabla_{\\mathbf{X}} \\log p(\\mathbf{X}) + \\nabla_{\\mathbf{X}} \\log p(\\mathbf{c} \\mid \\mathbf{X})",
+        "meaning": "指定した性能条件 c を満たすように、結晶の原子配置を微調整しながら生成していくための誘導式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "c5837223a75ed7a186f5f2ad0a21dbf8892a3432",
+    "arxivId": "2503.03965",
+    "title": "All-atom Diffusion Transformers: Unified generative modelling of molecules and materials",
+    "year": 2025,
+    "published": "2025-03-05",
+    "categories": [],
+    "citationCount": 124,
+    "influentialCitationCount": 22,
+    "url": "https://arxiv.org/abs/2503.03965",
+    "summary": "新薬の開発や新素材の設計では、分子や結晶といった原子の並び方をコンピュータで自動生成する技術が期待されています。しかし、規則正しく無限に並ぶ結晶材料と、境界が閉じた独立した分子とでは構造の性質が異なるため、これまでは別々の専用モデルが作られていました。そこで本研究では、分子と材料のどちらも一つのモデルで同時に生成できる共通の仕組み「ADiT」を開発しました。この手法では、原子の配置を一度扱いやすい数値データに変換し、画像生成などで使われる拡散モデルとTransformerを組み合わせて原子構造を生成します。これにより、対象の種類を問わずに高精度で自然な原子構造を作り出すことが可能になりました。",
+    "terms": {
+      "拡散モデル": "データに少しずつノイズを加えて壊していき、その逆をたどってノイズから元のデータを復元することで新しいデータを生み出すAI技術です。",
+      "Transformer": "データ全体の関連性を一度に広く見渡して処理を行う、現代の言語モデルや画像AIの基盤となっている仕組みです。",
+      "周期境界条件": "結晶などのように、決まったパターンが無限に繰り返される空間の並び方をコンピュータ上で再現するための計算ルールです。"
+    },
+    "formulas": [
+      {
+        "expression": "x_t = \\sqrt{\\alpha_t} x_0 + \\sqrt{1 - \\alpha_t} \\epsilon",
+        "meaning": "元の原子配置データ $x_0$ に段階的にノイズ $\\epsilon$ を混ぜて、時刻 $t$ におけるぼやけたデータ $x_t$ を作る計算式です。"
+      },
+      {
+        "expression": "\\mathcal{L}_{\\text{diff}} = \\mathbb{E}_{t, x_0, \\epsilon} \\left[ \\| \\epsilon - \\epsilon_\\theta(x_t, t) \\|^2 \\right]",
+        "meaning": "加えられたノイズ $\\epsilon$ と、AIモデル $\\epsilon_\\theta$ が予測したノイズのズレを測る式で、このズレが小さくなるように学習します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "b020cac5955b48c22ac59fa74bc49f6e3260a637",
+    "arxivId": "2310.20700",
+    "title": "SEINE: Short-to-Long Video Diffusion Model for Generative Transition and Prediction",
+    "year": 2023,
+    "published": "2023-10-31",
+    "categories": [],
+    "citationCount": 283,
+    "influentialCitationCount": 20,
+    "url": "https://arxiv.org/abs/2310.20700",
+    "summary": "AIによる動画生成技術は急速に進化していますが、現在作れる動画の多くは数秒程度の短いシーンに限られています。1つのまとまった物語性のある長い動画を作るには、異なるシーン同士を違和感なく滑らかに繋ぐ技術が必要です。そこで本研究では、短い動画から長い動画を作るための拡散モデル「SEINE」を提案しました。この手法は、前の場面と次の場面の間をクリエイティブに繋ぐトランジション機能と、前の場面の続きを予測して生成する機能を備えています。これにより、場面の変わり目でも映像の破綻が少なく、一貫したストーリーを持つ長尺動画が作成できるようになりました。",
+    "terms": {
+      "動画拡散モデル": "画像用の拡散モデルを発展させ、時間の経過に沿った映像の動きまで学習して動画を生成するAIです。",
+      "トランジション": "映像制作において、あるシーンから別のシーンへ画面が切り替わる際の演出や繋ぎ目のことです。",
+      "フレーム予測": "過去の数コマの映像を手がかりにして、その直後に続く未来の映像コマを予測して作り出す技術です。"
+    },
+    "formulas": [
+      {
+        "expression": "x_{1:L} = [f_1, f_2, \\dots, f_L]",
+        "meaning": "長さ $L$ の動画が、1枚ごとの画像フレーム $f_i$ の連続した集まりとして表されていることを示します。"
+      },
+      {
+        "expression": "\\mathcal{L} = \\mathbb{E}_{x, \\epsilon, t} \\left[ \\| \\epsilon - \\epsilon_\\theta(x_t, t, c) \\|^2 \\right]",
+        "meaning": "テキスト指示や前後の映像フレームといった条件 $c$ をもとに、映像に含まれるノイズを正確に予測するための損失関数です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "e788d5c6dc79f106296f8ad296bcbe512028d5f0",
+    "arxivId": "2403.09631",
+    "title": "3D-VLA: A 3D Vision-Language-Action Generative World Model",
+    "year": 2024,
+    "published": "2024-03-14",
+    "categories": [],
+    "citationCount": 458,
+    "influentialCitationCount": 19,
+    "url": "https://arxiv.org/abs/2403.09631",
+    "summary": "ロボットが自律的に動くためには、周囲の状況を見て、指示された言葉を理解し、手足を動かす「視覚・言語・行動（VLA）」の連携が不可欠です。しかし従来のモデルは2Dの平面画像だけを頼りに動作を直接決定していたため、奥行きのある現実の物理世界を十分に理解できていませんでした。そこで本研究では、人間が頭の中で未来の状況を想像して行動するように、3D空間の物理的な変化を予測する世界モデル「3D-VLA」を提案しました。このモデルは3Dの形状データと言語を組み合わせ、次の瞬間に物体や空間がどう変化するかを想像しながらロボットの動作を決定します。その結果、複雑な3D環境でもロボットが柔軟かつ正確に行動を計画できるようになりました。",
+    "terms": {
+      "VLAモデル": "「見る（Vision）」「言葉を理解する（Language）」「行動する（Action）」をひとつにまとめてロボットを制御するAIモデルです。",
+      "世界モデル": "周囲の環境が物理法則に従って時間とともにどう変化するかを、AI自身の内部でシミュレーションする仕組みです。",
+      "3D点群": "立体物の形状を、空間上に散らばる大量の点の3次元座標（X, Y, Z）の集まりとして表現したデータ形式です。"
+    },
+    "formulas": [
+      {
+        "expression": "a_t = \\pi(s_t, l)",
+        "meaning": "現在の環境の状態 $s_t$ と言葉による指示 $l$ を受け取り、ロボットが実行すべき行動 $a_t$ を導き出す方針関数 $\\pi$ です。"
+      },
+      {
+        "expression": "s_{t+1} \\sim p(s_{t+1} | s_t, a_t)",
+        "meaning": "現在の状態 $s_t$ で行動 $a_t$ を取ったときに、次の環境の状態 $s_{t+1}$ がどう変化するかという物理的な予測確率を示します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "df67a069d7425a2075f26681bc40c45901cfa67e",
+    "arxivId": "2305.11281",
+    "title": "SlotDiffusion: Object-Centric Generative Modeling with Diffusion Models",
+    "year": 2023,
+    "published": "2023-05-18",
+    "categories": [],
+    "citationCount": 112,
+    "influentialCitationCount": 19,
+    "url": "https://arxiv.org/abs/2305.11281",
+    "summary": "人間は画像を見るとき、無意識に「コップ」「テーブル」「猫」のように個別の物体に切り分けて認識しています。AIでもこのように画像から物体ごとにまとまった表現（スロット）を自動で抽出する研究が進んでいますが、それを使って高品質な画像を新しく作り出すことは困難でした。そこで本研究では、物体単位の表現学習と高い画質を誇る拡散モデルを融合した「SlotDiffusion」を提案しました。このモデルは画像から物体ごとの特徴を抽出した上で、それらのスロットを手がかりにして1枚の画像を組み立てるように学習します。これにより、特定の物体だけを別の位置に動かしたり消したりするような、細かな画像編集や生成が自由に行えるようになりました。",
+    "terms": {
+      "スロット": "画像の中に存在する1つ1つの物体や背景の情報をまとめて格納しておく、AI内部の整理箱のような単位です。",
+      "物体中心学習": "あらかじめ正解ラベルを与えられなくても、AIが自力で「何が個別の物体か」を見つけ出して理解する学習方法です。",
+      "画像編集": "AIが生成した画像や既存の画像の中から、特定の物体の色や位置だけを変更する作業のことです。"
+    },
+    "formulas": [
+      {
+        "expression": "\\mathbf{S} = \\{s_1, s_2, \\dots, s_K\\}",
+        "meaning": "1枚の画像に含まれる複数の物体や背景の情報が、合計 $K$ 個のスロット $s_i$ の集まりとして整理されていることを表します。"
+      },
+      {
+        "expression": "p(x | \\mathbf{S}) = \\prod_{t=1}^T p(x_{t-1} | x_t, \\mathbf{S})",
+        "meaning": "抽出されたスロット群 $\\mathbf{S}$ を道しるべとして、ノイズだらけの状態から段階的に画像 $x$ を復元していく生成過程です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "428e9c6d065c0c491bba37fe14fe1628f2b74a24",
+    "arxivId": "",
+    "title": "A novel deep learning neural network approach for predicting flash flood susceptibility: A case study at a high frequency tropical storm area.",
+    "year": 2019,
+    "published": "2019-09-12",
+    "categories": [],
+    "citationCount": 372,
+    "influentialCitationCount": 18,
+    "url": "https://www.semanticscholar.org/paper/428e9c6d065c0c491bba37fe14fe1628f2b74a24",
+    "summary": "台風などの熱帯低気圧が頻繁に通過する山岳地帯では、短時間で急激に水かさが増す鉄砲水が深刻な災害をもたらします。被害を減らすためには、どの地域が鉄砲水に襲われやすいかを事前に正確に予測するハザードマップの作成が急務となっています。本研究では、ベトナム北西部の高頻度被災地を対象に、深層学習ニューラルネットワーク（DLNN）を用いた新しい危険度予測手法を開発しました。地形や降水量などの環境データを入力し、3つの隠れ層と活性化関数を組み合わせたネットワークで計算を行う構造を採用しています。実際の災害履歴データで検証した結果、従来の予測手法に比べて鉄砲水の発生しやすい場所を高精度に言い当てることに成功しました。",
+    "terms": {
+      "鉄砲水": "集中豪雨などによって山間部の河川や谷に雨水が一気に集まり、急激に発生する破壊的な洪水のことです。",
+      "隠れ層": "ニューラルネットワークの入力と出力の間にある層で、データから複雑な特徴やパターンを段階的に抽出する部分です。",
+      "活性化関数": "ニューロンが受け取った刺激を次のニューロンに伝える強さを決める数式で、複雑で曲がりくねった関係性を学習できるようにします。"
+    },
+    "formulas": [
+      {
+        "expression": "f(x) = \\max(0, x)",
+        "meaning": "隠れ層で使われるReLU関数で、入力 $x$ がマイナスなら0を返し、プラスならそのまま出力して効率よく学習を進めます。"
+      },
+      {
+        "expression": "\\sigma(x) = \\frac{1}{1 + e^{-x}}",
+        "meaning": "最終的な出力で使われるシグモイド関数で、数値を0から1の範囲に変換して「洪水が発生する確率」として表現します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "8bba24bd08e99cc2e6596835f0179c2c3648d8a8",
+    "arxivId": "",
+    "title": "Multi-categorical deep learning neural network to classify retinal images: A pilot study employing small database",
+    "year": 2017,
+    "published": "2017-11-02",
+    "categories": [],
+    "citationCount": 265,
+    "influentialCitationCount": 18,
+    "url": "https://www.semanticscholar.org/paper/8bba24bd08e99cc2e6596835f0179c2c3648d8a8",
+    "summary": "失明などの重大な視力障害を防ぐためには、目の奥にある網膜の病気を早期に発見することが非常に重要です。医師が眼底カメラで撮影した写真を1枚ずつ目視で確認するには限界があるため、コンピュータによる自動診断の活用が期待されています。本研究では、畳み込みニューラルネットワーク（CNN）を用いて、1枚の眼底画像から正常な状態と9種類の網膜疾患を自動判別するシステムを構築しました。医療分野で課題となる症例データの少なさを補うため、画像を回転・変形させて増やすデータ拡張の工夫を取り入れました。小規模な公開データセットを用いた実験において、複数の病気を高い精度で分類できる可能性を示しました。",
+    "terms": {
+      "眼底画像": "瞳孔を通して眼球の奥にある網膜や血管、視神経を特殊なカメラで撮影した写真です。",
+      "畳み込みニューラルネットワーク (CNN)": "画像の特徴（輪郭や模様など）を捉えるのが得意な、画像認識で広く使われているAIの構造です。",
+      "データ拡張": "手持ちの画像データを少し傾けたり拡大したりして人工的にバリエーションを増やし、学習不足を防ぐ手法です。"
+    },
+    "formulas": [
+      {
+        "expression": "P(y = i | x) = \\frac{e^{z_i}}{\\sum_{j=1}^C e^{z_j}}",
+        "meaning": "ソフトマックス関数と呼ばれ、AIが出力した各疾患のスコア $z$ を、合計が100%になる確率に変換してクラス $i$ の確からしさを計算します。"
+      },
+      {
+        "expression": "C = 10",
+        "meaning": "今回の分類対象となるカテゴリの総数を表し、正常な目1種類と9種類の疾患を合わせた10項目を意味します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "333e80cb1be31236c6b20ab7813cb264604d5d9f",
+    "arxivId": "1906.10033",
+    "title": "Unifying machine learning and quantum chemistry with a deep neural network for molecular wavefunctions",
+    "year": 2019,
+    "published": "2019-06-24",
+    "categories": [],
+    "citationCount": 498,
+    "influentialCitationCount": 17,
+    "url": "https://arxiv.org/abs/1906.10033",
+    "summary": "化学や創薬の分野では、分子がどのような性質を持ち、どう化学反応を起こすかをコンピュータ計算で予測することが求められます。これまでの機械学習は分子のエネルギーなどの結果数値を素早く予測できましたが、電子の細かな振る舞いまでは直接捉えられず、反応の詳細な解析には限界がありました。そこで本研究では、量子化学の基本である分子の「電子波動関数」そのものを深層学習で直接予測する枠組みを提案しました。原子の配置から電子軌道の重なり合いをニューラルネットワークでモデル化し、量子力学の規則を満たすように学習させます。この手法により、膨大な計算時間を要する量子計算を肩代わりし、化学反応の途中の状態まで精密に予測できるようになりました。",
+    "terms": {
+      "波動関数": "量子力学において、電子などの微小な粒子が「どこにどのような状態で存在するか」を表す数学的な関数です。",
+      "量子化学": "分子や原子の振る舞いを量子力学の基本原理に基づいて解明し、化学現象を計算によって理解する学問です。",
+      "電子軌道": "原子や分子の内部で電子が存在する空間的な広がりや形を表す領域のことです。"
+    },
+    "formulas": [
+      {
+        "expression": "\\hat{H} \\Psi = E \\Psi",
+        "meaning": "シュレーディンガー方程式と呼ばれ、系のエネルギー演算子 $\\hat{H}$ と波動関数 $\\Psi$ からエネルギー $E$ を導く量子力学の基本方程式です。"
+      },
+      {
+        "expression": "\\Psi = \\sum_i c_i \\phi_i",
+        "meaning": "分子全体の波動関数 $\\Psi$ を、個々の原子の軌道 $\\phi_i$ に係数 $c_i$ を掛けて足し合わせたものとして表す式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "92b164c1e67017acb1051a6261d86bb3b842d4f0",
+    "arxivId": "2501.10018",
+    "title": "DiffuEraser: A Diffusion Model for Video Inpainting",
+    "year": 2025,
+    "published": "2025-01-17",
+    "categories": [],
+    "citationCount": 93,
+    "influentialCitationCount": 17,
+    "url": "https://arxiv.org/abs/2501.10018",
+    "summary": "動画インペインティングとは、動画の中に映り込んだ不要な人物や看板などを消去し、消えた部分を背景と違和感なく埋める技術です。従来の手法は前後のコマからピクセルをコピーして貼り合わせる方法が主流でしたが、消す範囲が広いと映像がぼやけたり、コマごとに絵がチラつく問題がありました。そこで本研究では、高い生成能力を持つ動画拡散モデルを活用した修復手法「DiffuEraser」を提案しました。前後のフレームから自然な質感情報を参照する仕組みと、拡散モデルによる創造的な補完能力をうまく統合しています。これにより、大きく欠落した領域であっても、時間の流れに沿って滑らかで鮮明な映像として復元できるようになりました。",
+    "terms": {
+      "動画インペインティング": "動画の特定の領域をマスクして消し去り、その穴を前後の文脈に合うように自然な映像で埋め戻す技術です。",
+      "オプティカルフロー": "前後の画像コマの間で、各ピクセルがどの方向にどれくらい動いたかを示す動きのベクトルのことです。",
+      "時間的一貫性": "動画を再生したときに、コマの間で映像が不自然にチラついたり形が急に変わったりせず、滑らかに繋がっている度合いのことです。"
+    },
+    "formulas": [
+      {
+        "expression": "x_{\\text{masked}} = x \\odot (1 - M)",
+        "meaning": "元の映像 $x$ に、消去したい部分を表すマスク $M$ を掛け合わせ、消去対象をくり抜いた不完全な映像を作る計算です。"
+      },
+      {
+        "expression": "\\mathcal{L}_{\\text{inpaint}} = \\mathbb{E} \\left[ \\| \\epsilon - \\epsilon_\\theta(x_t, t, x_{\\text{masked}}, M) \\|^2 \\right]",
+        "meaning": "くり抜かれた映像とマスクをヒントにして、ノイズから自然な修復映像を復元できるようにAIを学習させるための式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "d796c4ca2c43ab3eb7b5a86116345aaa9b334d65",
+    "arxivId": "1912.04825",
+    "title": "Integration of Neural Network-Based Symbolic Regression in Deep Learning for Scientific Discovery",
+    "year": 2019,
+    "published": "2019-12-10",
+    "categories": [],
+    "citationCount": 260,
+    "influentialCitationCount": 16,
+    "url": "https://arxiv.org/abs/1912.04825",
+    "summary": "深層学習は画像の認識や言語処理で高い精度を発揮しますが、なぜその予測結果になったのかが人間には分からない「ブラックボックス」になりがちです。一方で、実験データから背景にある物理法則を「数式」の形で導き出す記号回帰という技術は、解釈がしやすく未知の状況への応用力に優れています。本研究では、ニューラルネットワークの中に四則演算や三角関数などの数学記号を組み込み、データから数式を直接発見する手法を提案しました。ネットワークの不要な結合を段階的に削ぎ落とすことで、無駄のないシンプルな数式を自動的に導き出します。これにより、科学の実験データから物理法則の方程式を正確に再発見できることが実証されました。",
+    "terms": {
+      "記号回帰": "あらかじめ決まった計算式に数値を当てはめるのではなく、データに最もよく一致する「数式の形そのもの」を自動で見つけ出す手法です。",
+      "ブラックボックス": "入力に対して高精度な結果が出るものの、内部の仕組みが複雑すぎて人間には判断理由が理解できない状態のことです。",
+      "外挿": "学習に使ったデータの範囲を超えた、未知の極端な入力条件に対して予測を行うことです。"
+    },
+    "formulas": [
+      {
+        "expression": "y = f(x_1, x_2, \\dots, x_n)",
+        "meaning": "入力された複数の変数 $x_1$ から $x_n$ を組み合わせて、出力 $y$ を導き出す未知の数式 $f$ を表します。"
+      },
+      {
+        "expression": "\\mathcal{L} = \\text{MSE}(y, \\hat{y}) + \\lambda \\sum |w|",
+        "meaning": "予測の誤差（MSE）を小さくしつつ、数式の複雑さ（重み $w$ の大きさ）に罰則を与えて、短くシンプルな数式を選ばせるための計算式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "fa1db49fec0cfde794a9499efd1186b6f1108124",
+    "arxivId": "2304.06408",
+    "title": "Intriguing properties of synthetic images: from generative adversarial networks to diffusion models",
+    "year": 2023,
+    "published": "2023-04-13",
+    "categories": [],
+    "citationCount": 229,
+    "influentialCitationCount": 16,
+    "url": "https://arxiv.org/abs/2304.06408",
+    "summary": "AIが生成した本物そっくりの画像がインターネット上に溢れる中、偽画像を見抜くフェイク検出技術の重要性が急速に高まっています。これまではGANと呼ばれる手法で作られた画像が中心でしたが、近年ではより精巧な拡散モデルによる画像が普及し、見分けることが難しくなっています。そこで本研究では、様々な生成手法で作られた大量の画像を体系的に集め、偽画像に特有の不自然な痕跡（アーティファクト）を徹底的に調査しました。画像の細かな色の歪みや周波数成分の偏りを分析することで、AI生成画像に共通する隠れた特徴を特定しました。この知見は、新型の生成AIが登場しても対応できる、より強固な偽画像検出器を作るための基礎となっています。",
+    "terms": {
+      "GAN (敵対的生成ネットワーク)": "「本物そっくりの画像を作るAI」と「偽物を見破るAI」を競わせることで、高精度な画像を生成する技術です。",
+      "アーティファクト": "画像生成AIが作った画像の中に現れる、人間の目には気づきにくい特有の歪みや不自然なノイズの痕跡です。",
+      "周波数解析": "画像を明るさや色の細かな変化の波（周波数）に分解して、肉眼では見えない規則的なパターンの乱れを調べる分析手法です。"
+    },
+    "formulas": [
+      {
+        "expression": "\\min_G \\max_D \\mathbb{E}_{x}[\\log D(x)] + \\mathbb{E}_{z}[\\log(1 - D(G(z)))]",
+        "meaning": "GANの基本式で、生成器 $G$ が本物そっくりの画像を偽造しようとし、識別器 $D$ がそれを見破ろうと競い合う関係を表します。"
+      },
+      {
+        "expression": "D(x) \\in [0, 1]",
+        "meaning": "識別器が画像 $x$ を見たときに、それが「本物である確率」を0（偽物）から1（本物）の間の数値で判定することを示します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "1399fe83b724996b8aeeba0e213cb1895c539951",
+    "arxivId": "",
+    "title": "Analysis of transfer learning for deep neural network based plant classification models",
+    "year": 2019,
+    "published": "2019-03-01",
+    "categories": [],
+    "citationCount": 407,
+    "influentialCitationCount": 15,
+    "url": "https://www.semanticscholar.org/paper/1399fe83b724996b8aeeba0e213cb1895c539951",
+    "summary": "植物の種類を正しく見分けることは自然環境の保護において大切ですが、人間の専門家が目で見て判断するには多大な時間と費用がかかります。そこで、コンピュータに画像を見せて自動で植物の種類を判別させるディープラーニング技術の活用が進められています。この研究では、別の膨大な画像で学習済みのAIモデルを植物の分類に応用する「転移学習」という手法を詳しく分析しました。どの事前学習モデルをどのように調整すると最も効率よく高精度になるかを比較検証しています。その結果、ゼロから学習させるよりも、転移学習を使うことで少ない画像データでも高い正解率を達成できることが示されました。",
+    "terms": {
+      "転移学習": "ある分野で学んだAIの知識を、別の似た課題を解くために再利用して効率的に学習させる技術。",
+      "ディープニューラルネットワーク（DNN）": "人間の脳の神経回路を模した構造を多層に重ね、複雑なパターンを学習できるようにしたAIの仕組み。",
+      "ファインチューニング": "すでに学習を終えたモデルの一部の重みを、新しい課題のデータに合わせて少しだけ調整し直す手法。"
+    },
+    "formulas": [
+      {
+        "expression": "\\mathcal{L} = -\\sum_{i} y_i \\log(\\hat{y}_i)",
+        "meaning": "分類モデルの予測と実際の正解とのズレを測る「交差エントロピー損失」であり、この値を小さくするようにモデルが学習します。"
+      },
+      {
+        "expression": "\\text{Accuracy} = \\frac{TP + TN}{TP + TN + FP + FN}",
+        "meaning": "全データの中で、AIが正しく植物の種類を言い当てられた割合（正解率）を表します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "4c5c5001ea6338a53b9e8553f12ed1d35b936233",
+    "arxivId": "2308.13164",
+    "title": "Diff-Retinex: Rethinking Low-light Image Enhancement with A Generative Diffusion Model",
+    "year": 2023,
+    "published": "2023-08-25",
+    "categories": [],
+    "citationCount": 340,
+    "influentialCitationCount": 15,
+    "url": "https://arxiv.org/abs/2308.13164",
+    "summary": "暗い場所で撮影された写真は、全体が黒く潰れてしまったり余計なノイズが乗ってしまったりして細部が見えにくくなります。この論文では、光の当たり方を物理的に説明する理論と、画像を新しく描き出す最新の生成AI技術を組み合わせた「Diff-Retinex」という手法を提案しています。画像を「物体そのものの色」と「当たっている光の量」に分解し、それぞれを拡散モデルというAIで補正します。これにより、暗がりで失われてしまった輪郭や色の情報をAIが自然に補いながら復元します。実験の結果、不自然な白飛びやざらつきを抑え、まるで明るい場所で撮ったかのような鮮明な写真が得られるようになりました。",
+    "terms": {
+      "Retinex（レティネックス）理論": "目に見える画像の明るさは「物体が持つ本来の反射率」と「照明の強さ」の掛け算で決まるという物理モデル。",
+      "低照度画像強調": "夜間や室内などの暗い場所で撮影された画像を、明るく見やすい状態に補正する技術。",
+      "拡散モデル": "画像に少しずつノイズを加えていき、逆にそのノイズを丁寧に取り除く手順を学習することで新しい画像を綺麗に生成するAI技術。"
+    },
+    "formulas": [
+      {
+        "expression": "I = R \\circ L",
+        "meaning": "観測された画像 $I$ は、物体本来の色や模様である反射成分 $R$ と、光の当たり具合である照明成分 $L$ の要素ごとの積として分解できることを示します。"
+      },
+      {
+        "expression": "x_{t-1} = \\frac{1}{\\sqrt{\\alpha_t}} \\left( x_t - \\frac{1-\\alpha_t}{\\sqrt{1-\\bar{\\alpha}_t}} \\epsilon_\\theta(x_t, t) \\right) + \\sigma_t z",
+        "meaning": "ノイズが混ざった画像 $x_t$ からAIが予測したノイズ $\\epsilon_\\theta$ を引き去ることで、1歩手前のより鮮明な画像 $x_{t-1}$ を復元する計算式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "d8885a0ae16468e1526461c621fe62cf444b9d4b",
+    "arxivId": "2306.09251",
+    "title": "Towards Faster Non-Asymptotic Convergence for Diffusion-Based Generative Models",
+    "year": 2023,
+    "published": "2023-06-15",
+    "categories": [],
+    "citationCount": 97,
+    "influentialCitationCount": 15,
+    "url": "https://arxiv.org/abs/2306.09251",
+    "summary": "画像を自動生成する「拡散モデル」は実用面で大成功していますが、なぜ、そしてどれくらいの計算回数を行えば狙い通りの高品質なデータを作れるのかという数学的な裏付けは未完成でした。この研究では、コンピュータが扱いやすい離散的な時間ステップにおいて、拡散モデルがデータを生成する速度と正確さを理論的に解析しました。生成の各ステップで生じる細かな予測誤差が、最終的な画像全体の品質にどのような影響を及ぼすかを厳密に計算しています。その結果、従来考えられていたよりも少ない計算ステップ数で高品質な生成が理論上保証されることを明らかにしました。本論文の理論は、拡散モデルをより高速に動かすための指針を与えています。",
+    "terms": {
+      "拡散モデル": "ノイズから少しずつ雑音を取り除く逆再生のような処理を行うことで、高品質なデータを生成するAIモデル。",
+      "スコア関数": "データが存在する確率の山において、どの方向に進めばより自然なデータに近づけるかを示すベクトルのこと。",
+      "非漸近的収束": "計算回数を無限に増やしたときの極限だけでなく、現実的な限られたステップ数の中でどれだけ正解に近づけるかを評価すること。"
+    },
+    "formulas": [
+      {
+        "expression": "s_\\theta(x, t) \\approx \\nabla \\log p_t(x)",
+        "meaning": "AIネットワーク $s_\\theta$ が、時刻 $t$ におけるデータの確率密度 $p_t(x)$ の傾き（スコア関数）を正確に近似することを目指す関係式です。"
+      },
+      {
+        "expression": "\\text{TV}(p, q) = \\frac{1}{2} \\int |p(x) - q(x)| dx",
+        "meaning": "生成されたデータの確率分布 $p$ と、本物のデータの確率分布 $q$ の間にあるズレの大きさを表す全変動（TV）距離です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "c664d1ef1c40fa412c2b9504e4f871c047189f30",
+    "arxivId": "",
+    "title": "Establishing Robust Generative Image Steganography via Popular Stable Diffusion",
+    "year": 2024,
+    "published": "2024",
+    "categories": [],
+    "citationCount": 80,
+    "influentialCitationCount": 15,
+    "url": "https://www.semanticscholar.org/paper/c664d1ef1c40fa412c2b9504e4f871c047189f30",
+    "summary": "画像の中に人には気づかれないように秘密のメッセージを隠す技術をステガノグラフィと呼びます。従来の生成AIを用いた隠し込み手法は、出来上がる画像の見た目が不自然だったり、通信中に画像が圧縮されると秘密が壊れて取り出せなくなったりする弱点がありました。そこで本論文では、有名な画像生成モデルである「Stable Diffusion」を利用した新しい情報隠蔽手法を提案しています。テキストから画像を生成する過程の数値の中に秘密情報を巧みに埋め込むことで、自然な見た目を保ちます。この工夫により、ネット上でのJPEG圧縮やノイズなどの攻撃を受けても、メッセージを壊さず正確に取り出すことが可能になりました。",
+    "terms": {
+      "ステガノグラフィ": "画像や音声などの一見無害に見えるデータの中に、第三者に気づかれないよう秘密の通信文を埋め込む技術。",
+      "Stable Diffusion": "入力されたテキスト（指示文）の内容に沿って、高品質な画像を高速に作り出せる代表的な画像生成AI。",
+      "ロバスト性（頑健性）": "画像の圧縮や通信エラーなどの外乱が加わっても、データが壊れずに機能し続ける強さのこと。"
+    },
+    "formulas": [
+      {
+        "expression": "z = \\mathcal{E}(x)",
+        "meaning": "元の画像 $x$ をエンコーダ $\\mathcal{E}$ に通して、コンピュータが扱いやすいコンパクトな潜在表現 $z$ に変換することを示します。"
+      },
+      {
+        "expression": "\\min \\| m - \\text{Extract}(z') \\|^2",
+        "meaning": "秘密情報が埋め込まれたデータ $z'$ から取り出した内容が、元の秘密メッセージ $m$ と完全に一致するように誤差を最小化する目的を表します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "ba95ae1b56fa8450f4347e7d69ab84de70f1913b",
+    "arxivId": "",
+    "title": "A comparison of day-ahead photovoltaic power forecasting models based on deep learning neural network",
+    "year": 2019,
+    "published": "2019-10-01",
+    "categories": [],
+    "citationCount": 535,
+    "influentialCitationCount": 14,
+    "url": "https://www.semanticscholar.org/paper/ba95ae1b56fa8450f4347e7d69ab84de70f1913b",
+    "summary": "太陽光発電はエコなエネルギーですが、天候によって発電量が大きく乱高下するため、電力網を安定させるには翌日の発電量を正しく予測することが欠かせません。しかし、天気の急変や日射量の不確実性があるため、高精度な予測は非常に困難でした。そこでこの研究では、ディープラーニングの代表的な構造であるCNNとLSTM、およびそれらを組み合わせたハイブリッドモデルを作成して性能を比較しました。CNNで気象データの空間的な特徴を捉え、LSTMで時間に伴う移り変わりを捉える仕組みです。実際のデータを用いて検証した結果、CNNとLSTMを組み合わせたハイブリッドモデルが最も正確に発電量を予測できることが分かりました。",
+    "terms": {
+      "CNN（畳み込みニューラルネットワーク）": "画像などのデータから局所的な特徴（形やパターン）を抽出するのが得意なニューラルネットワーク。",
+      "LSTM（長短期記憶）": "過去の情報を記憶し続ける仕組みを持ち、天気の変化のような時系列データの予測を得意とするネットワーク。",
+      "ハイブリッドモデル": "長所の異なる複数のAI構造を組み合わせて、単体よりも高い性能を目指したモデル。"
+    },
+    "formulas": [
+      {
+        "expression": "\\text{RMSE} = \\sqrt{\\frac{1}{N}\\sum_{i=1}^N (y_i - \\hat{y}_i)^2}",
+        "meaning": "実際の発電量 $y_i$ とAIの予測値 $\\hat{y}_i$ の誤差を二乗平均して平方根を取った値で、予測のズレの標準的な大きさを表します。"
+      },
+      {
+        "expression": "\\text{MAPE} = \\frac{100\\%}{N}\\sum_{i=1}^N \\left| \\frac{y_i - \\hat{y}_i}{y_i} \\right|",
+        "meaning": "実際の発電量に対して、予測の誤差が何パーセントあったかの平均値を示す指標です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "cea4c7e52db428f4618e03d32a774cceb2bc570a",
+    "arxivId": "2311.10242",
+    "title": "Advancements in Generative AI: A Comprehensive Review of GANs, GPT, Autoencoders, Diffusion Model, and Transformers",
+    "year": 2023,
+    "published": "2023-11-17",
+    "categories": [],
+    "citationCount": 298,
+    "influentialCitationCount": 14,
+    "url": "https://arxiv.org/abs/2311.10242",
+    "summary": "文章や画像、音声を自動で作り出す「生成AI」は、ChatGPTの登場などをきっかけに世界中で大きな注目を集めています。しかし、その土台には過去数十年にわたる様々なAIアーキテクチャの進歩が存在しています。この論文では、画像を競わせて作るGAN、文章の文脈を捉えるTransformer、言語モデルのGPT、そして近年の拡散モデルなどを網羅的に整理しています。各技術がどのような仕組みで動作し、どのような長所や限界を持っているのかを丁寧に比較しました。さらに、これらの技術がメディア生成や創作活動にどう役立つか、また悪用防止などの今後の課題についても論じています。",
+    "terms": {
+      "生成AI（Generative AI）": "学習したデータをもとに、オリジナルの文章や画像、音声などを新しく作り出す人工知能の総称。",
+      "GAN（敵対的生成ネットワーク）": "「偽物を作る役」と「それを見破る役」の2つのAIを競わせることで、本物そっくりのデータを作れるようにする仕組み。",
+      "Transformer（トランスフォーマー）": "文章全体の単語同士の関係性を同時に捉えることで、長文の理解や翻訳を劇的に高速・高精度にしたAIの構造。"
+    },
+    "formulas": [
+      {
+        "expression": "\\min_G \\max_D V(D, G) = \\mathbb{E}_{x}[\\log D(x)] + \\mathbb{E}_{z}[\\log(1 - D(G(z)))]",
+        "meaning": "GANにおいて、偽物を作る生成器 $G$ と見破る識別器 $D$ がお互いに競い合いながら賢くなるためのゲームの目的式です。"
+      },
+      {
+        "expression": "\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V",
+        "meaning": "Transformerが単語と単語の関連度（どの単語に注目すべきか）を計算して、文脈を把握するための計算式です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "e811c76173d4b0e478d3ab5965358a6377dd48ce",
+    "arxivId": "1802.05800",
+    "title": "Tree-CNN: A hierarchical Deep Convolutional Neural Network for incremental learning",
+    "year": 2018,
+    "published": "2018-02-15",
+    "categories": [],
+    "citationCount": 247,
+    "influentialCitationCount": 14,
+    "url": "https://arxiv.org/abs/1802.05800",
+    "summary": "深層学習は画像認識などで高い精度を誇りますが、一度学習を終えたモデルに「新しい種類の物体」を追加で覚えさせようとすると、以前覚えたことをすっかり忘れてしまう問題があります。これを防ぐために最初から全てのデータを集め直して再学習するのは、莫大な計算時間と手間がかかります。そこで本研究では、木（ツリー）の枝分かれのように知識を階層的に蓄積していく「Tree-CNN」という新しい仕組みを提案しました。新しいカテゴリがやってくると、既存のネットワークを壊すことなく、新しい枝を伸ばすようにモデルを拡張していきます。この手法により、過去の記憶を保持したまま新しい物体を次々と効率よく学習できるようになりました。",
+    "terms": {
+      "破滅的忘却": "AIが新しい知識を学習した際に、過去に学習した内容を上書きして完全に忘れてしまう現象。",
+      "インクリメンタル学習（継続学習）": "以前の知識を維持しながら、新しいデータやタスクを少しずつ追加で学んでいく学習方式。",
+      "階層型ネットワーク": "大きなカテゴリから細かい分類へと、樹形図のように枝分かれしながら段階的に判断を下すAI構造。"
+    },
+    "formulas": [
+      {
+        "expression": "P(y \\in C_i \\mid x) = \\frac{\\exp(w_i^T x)}{\\sum_j \\exp(w_j^T x)}",
+        "meaning": "入力画像 $x$ が、ツリーのどの枝（クラスグループ $C_i$）に進むべきかの確率を計算する式です。"
+      },
+      {
+        "expression": "\\mathcal{L}_{total} = \\mathcal{L}_{node} + \\lambda \\mathcal{L}_{leaf}",
+        "meaning": "ツリーの途中のノードでの大まかな分類の誤差と、末端の葉での詳細な分類の誤差をバランスよく足し合わせた全体の学習損失です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "6b0020c4094b18b5886bce5506d2bce461805ed8",
+    "arxivId": "2408.08593",
+    "title": "RadioDiff: An Effective Generative Diffusion Model for Sampling-Free Dynamic Radio Map Construction",
+    "year": 2024,
+    "published": "2024-08-16",
+    "categories": [],
+    "citationCount": 225,
+    "influentialCitationCount": 13,
+    "url": "https://arxiv.org/abs/2408.08593",
+    "summary": "次世代の6G通信では、街のどこで電波がどのくらい届くかを示す「電波マップ」を作成することが、通信の効率化のために強く求められています。しかし、従来のように街中に測定器を持って行って電波を測るのは莫大なコストがかかり、数理シミュレーションも計算に時間がかかりすぎる難点がありました。この研究では、画像生成で使われる拡散モデルを応用して、測定作業を行わずに電波マップを予測生成する「RadioDiff」を開発しました。建物の配置や基地局の位置を入力するだけで、電波の減衰パターンをAIが自動で描き出します。実験の結果、測定データがない未知のエリアでも、素早くかつ高精度に電波の広がりを再現することに成功しました。",
+    "terms": {
+      "電波マップ（Radio Map）": "エリア内の各地点における電波の強さや減衰具合を、地図の上に色の濃淡などで可視化したもの。",
+      "パスロス（伝搬損失）": "電波が空中を進むにつれて、距離や障害物によって強度が弱まっていく現象。",
+      "サンプリングフリー": "現地に出向いて電波の実測データを集める必要がなく、環境の地図情報などから直接結果を推定できること。"
+    },
+    "formulas": [
+      {
+        "expression": "q(x_t \\mid x_{t-1}) = \\mathcal{N}(x_t; \\sqrt{1 - \\beta_t}x_{t-1}, \\beta_t I)",
+        "meaning": "電波マップの画像データに対して、ステップごとに少しずつガウスノイズを加えていく前向きの拡散プロセスです。"
+      },
+      {
+        "expression": "\\mathcal{L}_{Diff} = \\mathbb{E}_{t, x_0, \\epsilon} \\left[ \\| \\epsilon - \\epsilon_\\theta(x_t, t, c) \\|^2 \\right]",
+        "meaning": "建物の配置などの条件 $c$ をもとに、画像に加えられたノイズ $\\epsilon$ をAIがどれだけ正確に当てられたかを測る学習の指標です。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "f02496b00415369183c77c9a10e2149b6ded0850",
+    "arxivId": "2301.03028",
+    "title": "Generative Time Series Forecasting with Diffusion, Denoise, and Disentanglement",
+    "year": 2023,
+    "published": "2023-01-08",
+    "categories": [],
+    "citationCount": 213,
+    "influentialCitationCount": 13,
+    "url": "https://arxiv.org/abs/2301.03028",
+    "summary": "気象や株価、工場のセンサーなどの時系列データを予測することは多くの産業で重要ですが、実世界のデータはノイズが多く、記録期間も短いため予測が困難でした。この論文では、生成AIの技術を応用した新しい予測モデル「D3VAE」を提案しています。このモデルは、時間とともに変化する複雑なデータを「長期間のトレンド」「周期的なリズム」「突発的なノイズ」という独立した成分に綺麗に分解します。さらに拡散モデルのノイズ除去技術を組み合わせることで、余分な雑音に惑わされずに本質的なパターンを取り出します。実世界のデータを用いたテストにおいて、従来の手法よりも先の未来を格段に正確に予測できることを確認しました。",
+    "terms": {
+      "時系列予測": "過去から現在までの時間の流れに沿った数値データをもとに、未来の数値を予測すること。",
+      "もつれ解消（Disentanglement）": "複雑に絡み合ったデータの特徴を、それぞれ意味を持つ独立した別々の要素に分解して扱いやすくすること。",
+      "変分オートエンコーダ（VAE）": "データを一度要約した特徴に圧縮し、そこから元のデータを再構築することでデータの背後にある性質を学ぶAI。"
+    },
+    "formulas": [
+      {
+        "expression": "\\mathcal{L}_{ELBO} = \\mathbb{E}_{q_\\phi(z|x)}[\\log p_\\theta(x|z)] - D_{KL}(q_\\phi(z|x) \\parallel p(z))",
+        "meaning": "AIがデータを正しく復元できている度合いと、圧縮された特徴が想定通りの素直な分布に従っているかを両立させるための学習の計算式です。"
+      },
+      {
+        "expression": "z = [z_{trend}, z_{season}, z_{noise}]",
+        "meaning": "全体の潜在変数 $z$ が、データの長期的な傾向（トレンド）、規則的な繰り返し（周期）、および雑音（ノイズ）にきれいに分解されていることを表します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
+  },
+  {
+    "paperId": "41e0db1838e1539adc9d802dd52b1a11f67f5cd2",
+    "arxivId": "2306.04321",
+    "title": "Generative Semantic Communication: Diffusion Models Beyond Bit Recovery",
+    "year": 2023,
+    "published": "2023-06-07",
+    "categories": [],
+    "citationCount": 112,
+    "influentialCitationCount": 13,
+    "url": "https://arxiv.org/abs/2306.04321",
+    "summary": "これまでの通信技術は、送信側が送った「0」と「1」のビットデータを、受信側で1つも間違えずにそのまま復元することを目的に作られてきました。しかし、大容量の画像などを頻繁にやりとりする現代では、通信回線の混雑が深刻な課題となっています。そこで本論文では、画像の細かい画素データではなく、そこに何が写っているかという「意味」だけを抽出し、受信側の拡散モデルで画像を再現する「セマンティック通信」を提案しました。受信側の生成AIが、受け取ったわずかな意味情報から自然な画像を新しく描き出します。これにより、送るデータ量を劇的に減らしながらも、受け取った画像から物体を正しく認識できるなど、実用性の高い通信が可能になりました。",
+    "terms": {
+      "セマンティック通信": "文字やビットの丸暗記伝達ではなく、メッセージの「意味内容」だけを伝えて効率化を図る次世代の通信アプローチ。",
+      "ビット復元": "従来の通信のように、送信されたデジタル信号（0と1の並び）を一言一句違わずに完璧に復元すること。",
+      "ダウンストリームタスク": "通信で届いた画像を使って行う、物体の検出や位置の測定といった後続の具体的な作業のこと。"
+    },
+    "formulas": [
+      {
+        "expression": "y = h \\cdot E(x) + n",
+        "meaning": "画像 $x$ から意味を抽出して符号化した信号 $E(x)$ が、通信経路の状況 $h$ やノイズ $n$ の影響を受けて受信信号 $y$ になる過程を表します。"
+      },
+      {
+        "expression": "\\hat{x} = G(y)",
+        "meaning": "受信側にある生成モデル $G$ が、届いたわずかな信号 $y$ をもとに元のシーンを忠実に再構築した画像 $\\hat{x}$ を作り出すことを示します。"
+      }
+    ],
+    "addedDate": "2026-11-28"
   }
 ]
